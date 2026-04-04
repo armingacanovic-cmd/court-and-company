@@ -20,9 +20,9 @@ export default function DatenschutzPage() {
             <h2 className="text-lg font-bold text-anthracite mb-3">1. Verantwortlicher</h2>
             <p>
               Verantwortlicher im Sinne der Datenschutzgesetze ist:<br /><br />
-              [Dein Vorname Nachname / Firmenname]<br />
-              [Straße und Hausnummer]<br />
-              [PLZ Ort]<br />
+              Armin Gacanovic<br />
+              Kollatzstraße 5<br />
+              14059 Berlin<br />
               E-Mail: armin.gacanovic@web.de
             </p>
           </section>

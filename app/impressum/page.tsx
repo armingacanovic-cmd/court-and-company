@@ -18,9 +18,9 @@ export default function ImpressumPage() {
           <section>
             <h2 className="text-lg font-bold text-anthracite mb-2">Angaben gemäß § 5 TMG</h2>
             <p>
-              [Dein Vorname Nachname / Firmenname]<br />
-              [Straße und Hausnummer]<br />
-              [PLZ Ort]<br />
+              Armin Gacanovic<br />
+              Kollatzstraße 5<br />
+              14059 Berlin<br />
               Deutschland
             </p>
           </section>
@@ -44,8 +44,8 @@ export default function ImpressumPage() {
           <section>
             <h2 className="text-lg font-bold text-anthracite mb-2">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p>
-              [Dein Vorname Nachname]<br />
-              [Adresse wie oben]
+              Armin Gacanovic<br />
+              Kollatzstraße 5, 14059 Berlin
             </p>
           </section>
 
