@@ -1,65 +1,214 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-cream text-anthracite">
+
+      {/* Navigation */}
+      <nav className="flex items-center justify-between px-8 py-5 bg-cream border-b border-beige/30 sticky top-0 z-50">
+        <div>
+          <span className="text-2xl font-extrabold tracking-tight text-forest">Court</span>
+          <span className="text-2xl font-light tracking-tight text-anthracite"> & Company</span>
+        </div>
+        <Link
+          href="/buchen"
+          className="bg-forest text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:bg-lime transition-colors"
+        >
+          Jetzt anfragen
+        </Link>
+      </nav>
+
+      {/* Hero */}
+      <section className="px-6 pt-24 pb-28 text-center bg-cream relative overflow-hidden">
+        {/* Farbiger Hintergrundakzent */}
+        <div className="absolute inset-0 bg-gradient-to-br from-lime/10 via-cream to-sand pointer-events-none" />
+        <div className="relative z-10">
+          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+            Corporate Padel Events · Deutschland
+          </span>
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-anthracite">
+            Padel Meets<br />
+            <span className="text-forest">Business.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg text-anthracite/65 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Wir gestalten hochwertige Eventformate für Unternehmen, die ihren Mitarbeitenden,
+            Kunden oder Partnern mehr bieten möchten als ein klassisches Get-together.
+            Sportliche Aktivierung, stilvolles Ambiente und echtes Networking — vollständig organisiert.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/buchen"
+              className="bg-forest text-cream px-8 py-4 rounded-full text-base font-bold hover:bg-lime transition-colors shadow-lg"
+            >
+              Kostenlos anfragen →
+            </Link>
+            <a
+              href="#leistungen"
+              className="border-2 border-anthracite/20 text-anthracite px-8 py-4 rounded-full text-base font-semibold hover:border-forest hover:text-forest transition-colors"
+            >
+              Leistungen entdecken
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Warum Padel */}
+      <section className="bg-forest text-cream px-6 py-20">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            Der Unterschied
+          </span>
+          <h2 className="text-4xl font-extrabold mb-14">Warum Padel?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            {[
+              { icon: "🤝", text: "Team-Building mit emotionalem Mehrwert" },
+              { icon: "🏆", text: "Sportlicher Wettbewerb in lockerer Atmosphäre" },
+              { icon: "💬", text: "Networking abseits klassischer Business-Formate" },
+              { icon: "✨", text: "Premium-Inszenierung statt Standard-Firmenfeier" },
+              { icon: "💪", text: "Stärkt Teamgeist und Mitarbeiterbindung" },
+              { icon: "👥", text: "Für Mitarbeitende, Kunden und Partner" },
+            ].map((item) => (
+              <div key={item.text} className="flex items-start gap-4 bg-white/10 hover:bg-white/15 rounded-2xl p-5 border border-white/10 transition-colors">
+                <span className="text-2xl">{item.icon}</span>
+                <p className="text-cream/90 font-semibold leading-snug">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Für wen */}
+      <section className="px-6 py-20 bg-sand">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            Zielgruppen
+          </span>
+          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Für wen ist das?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Mitarbeiter",
+                desc: "Ein exklusives Eventformat, das Teamgeist stärkt, Motivation fördert und Mitarbeitenden echte Wertschätzung in einem besonderen Rahmen vermittelt.",
+                icon: "🏢",
+                accent: "bg-lime",
+              },
+              {
+                title: "Kunden",
+                desc: "Ein hochwertiger Anlass, um Beziehungen zu vertiefen, persönliche Begegnungen zu schaffen und Markenbindung auf emotionale Weise erlebbar zu machen.",
+                icon: "🌟",
+                accent: "bg-forest",
+              },
+              {
+                title: "Partner",
+                desc: "Eine stilvolle Plattform für Austausch, Vernetzung und gemeinsame Erlebnisse, die bestehende Business-Beziehungen stärkt und neue Verbindungen fördert.",
+                icon: "🤝",
+                accent: "bg-beige",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className={`w-12 h-12 ${item.accent} rounded-xl flex items-center justify-center text-2xl mb-5`}>
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-extrabold mb-3 text-forest">{item.title}</h3>
+                <p className="text-anthracite/65 leading-relaxed text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leistungen */}
+      <section id="leistungen" className="px-6 py-20 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            Full-Service
+          </span>
+          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Was wir übernehmen</h2>
+          <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
+            Von der ersten Planung bis zum letzten Programmpunkt übernehmen wir alles.
+            Ihr erscheint — wir haben alles vorbereitet.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: "📍", title: "Location", desc: "Hochwertige Padel-Locations, vollständige Court-Koordination und professionelles Set-up." },
+              { icon: "📋", title: "Organisation", desc: "Ablaufplanung, Turnierformate, Moderation und Ergebniserfassung." },
+              { icon: "🎾", title: "Coaching", desc: "Trainer vor Ort, Warm-up, Einführung für Einsteiger aller Spielniveaus." },
+              { icon: "🍽️", title: "Catering", desc: "Hochwertiges Catering, Getränke, Snacks und kulinarischer Abschluss." },
+              { icon: "🎵", title: "Entertainment", desc: "DJ, Moderation, Musik und atmosphärische Gestaltung." },
+              { icon: "🎨", title: "Branding", desc: "Logo-Flächen, Shirts, Caps, Paddlebälle und individuelle Inszenierung." },
+              { icon: "💬", title: "Networking", desc: "Lounge-Bereiche, Networking-Slots und professioneller Austausch." },
+              { icon: "🏆", title: "Siegerehrung", desc: "Siegertrophäen, emotionale Abschlussmomente und gebrandete Awards." },
+            ].map((item, i) => (
+              <div
+                key={item.title}
+                className={`rounded-2xl p-6 hover:shadow-md transition-shadow ${i % 3 === 0 ? "bg-forest text-cream" : "bg-sand"}`}
+              >
+                <span className="text-2xl mb-3 block">{item.icon}</span>
+                <h3 className={`font-extrabold mb-2 ${i % 3 === 0 ? "text-lime" : "text-forest"}`}>{item.title}</h3>
+                <p className={`text-sm leading-relaxed ${i % 3 === 0 ? "text-cream/70" : "text-anthracite/60"}`}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Event Flow */}
+      <section className="px-6 py-20 bg-anthracite text-cream">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            Tagesablauf
+          </span>
+          <h2 className="text-4xl font-extrabold mb-14">Ein typischer Event-Tag</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { time: "15:00", title: "Welcome & Arrival", desc: "Welcome Drinks, gebrandete Welcome Area und erste Musik schaffen eine exklusive Atmosphäre." },
+              { time: "15:30", title: "Opening", desc: "Begrüßung, Einführung in das Eventkonzept und den Tagesablauf." },
+              { time: "15:45", title: "Warm-up & Coaching", desc: "Gemeinsames Warm-up mit Trainern, Einweisung in Spielablauf und Turniermodus." },
+              { time: "16:15", title: "Match Phase I", desc: "Erste Spielrunde — übrige Gäste genießen Lounge, Musik und Catering." },
+              { time: "17:30", title: "Social Break", desc: "Gezielte Pause mit Fokus auf Austausch, Verpflegung und Networking." },
+              { time: "18:00", title: "Match Phase II", desc: "Finalspiele und sportlicher Höhepunkt des Events." },
+              { time: "19:00", title: "Siegerehrung", desc: "Übergabe von Pokalen, Awards und gebrandeten Preisen." },
+              { time: "19:30", title: "Get Together", desc: "DJ, Drinks, Catering und Lounge-Atmosphäre für den stilvollen Ausklang." },
+            ].map((item) => (
+              <div key={item.time} className="rounded-2xl p-5 border border-white/10 hover:border-lime/60 hover:bg-white/5 transition-all">
+                <p className="text-lime font-extrabold text-sm mb-1">{item.time}</p>
+                <h3 className="font-bold text-cream mb-2">{item.title}</h3>
+                <p className="text-cream/45 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-lime text-white text-center px-6 py-24">
+        <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          Bereit loszulegen?
+        </span>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Euer Event. Unser Service.</h2>
+        <p className="text-white/80 mb-10 max-w-xl mx-auto leading-relaxed">
+          Unverbindliche Anfrage in 2 Minuten — wir melden uns innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot.
+        </p>
+        <Link
+          href="/buchen"
+          className="bg-forest text-cream px-10 py-4 rounded-full text-base font-bold hover:bg-anthracite transition-colors shadow-xl"
+        >
+          Jetzt kostenlos anfragen →
+        </Link>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-anthracite text-cream/40 text-sm px-8 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <span>
+          <strong className="text-cream">Court</strong> & Company — Corporate Padel Events
+        </span>
+        <div className="flex gap-6">
+          <a href="/impressum" className="hover:text-lime transition-colors">Impressum</a>
+          <a href="/datenschutz" className="hover:text-lime transition-colors">Datenschutz</a>
+          <a href="/buchen" className="hover:text-lime transition-colors">Anfragen</a>
+        </div>
+      </footer>
+
+    </main>
   );
 }
