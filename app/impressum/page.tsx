@@ -28,16 +28,8 @@ export default function ImpressumPage() {
           <section>
             <h2 className="text-lg font-bold text-anthracite mb-2">Kontakt</h2>
             <p>
-              Telefon: [+49 ...] <br />
+              Telefon: +49 176 51998637<br />
               E-Mail: armin.gacanovic@web.de
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-bold text-anthracite mb-2">Umsatzsteuer-ID</h2>
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-              [DE-Nummer eintragen oder Zeile löschen falls nicht vorhanden]
             </p>
           </section>
 
