@@ -23,6 +23,19 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    title: "Court & Company — Corporate Padel Events",
+    description: "Wir organisieren eure komplette Firmenfeier in einer Paddlehalle. Einfach anfragen, wir erledigen den Rest.",
+    url: "https://court-and-company.com",
+    siteName: "Court & Company",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Court & Company — Corporate Padel Events",
+    description: "Wir organisieren eure komplette Firmenfeier in einer Paddlehalle. Einfach anfragen, wir erledigen den Rest.",
+  },
 };
 
 export default function RootLayout({
