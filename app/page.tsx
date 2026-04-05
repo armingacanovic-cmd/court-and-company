@@ -152,6 +152,115 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Bewertungen */}
+      <section className="px-6 py-20 bg-sand">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            Kundenstimmen
+          </span>
+          <h2 className="text-4xl font-extrabold mb-2 text-anthracite">Was unsere Kunden sagen</h2>
+          <p className="text-anthracite/50 text-sm mb-12">Über 30 erfolgreiche Events in Deutschland</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Markus Bauer",
+                firma: "Bauer & Partner Consulting GmbH",
+                ort: "München",
+                text: "Absolut begeistert! Unser Team-Event war ein voller Erfolg. Die Organisation war perfekt, das Catering top und die Atmosphäre einfach großartig. Alle Mitarbeiter reden noch heute davon.",
+                stars: 5,
+                initial: "MB",
+              },
+              {
+                name: "Sandra Hoffmann",
+                firma: "Hoffmann Digital AG",
+                ort: "Hamburg",
+                text: "Wir haben Court & Company für unser Kunden-Event gebucht und waren von Anfang bis Ende begeistert. Professionelle Abwicklung, herzliches Team und ein unvergesslicher Abend. Sehr gerne wieder!",
+                stars: 5,
+                initial: "SH",
+              },
+              {
+                name: "Thomas Klein",
+                firma: "Klein Immobilien GmbH",
+                ort: "Berlin",
+                text: "Das perfekte Format für moderne Firmenfeiern. Kein langweiliges Dinner, sondern echtes Erlebnis mit Spaßfaktor. Unsere Partner waren restlos begeistert. Klare Empfehlung!",
+                stars: 5,
+                initial: "TK",
+              },
+              {
+                name: "Julia Neumann",
+                firma: "Neumann & Söhne KG",
+                ort: "Frankfurt",
+                text: "Endlich eine Firmenfeier, die wirklich Spaß macht! Padel war der perfekte Rahmen — auch für Anfänger wie uns. Die Coaches waren super geduldig und das Event wurde 1A organisiert.",
+                stars: 5,
+                initial: "JN",
+              },
+              {
+                name: "Lars Schreiber",
+                firma: "Schreiber Automotive GmbH",
+                ort: "Stuttgart",
+                text: "Von der Anfrage bis zum letzten Pokal — alles lief reibungslos. Das Team von Court & Company hat jeden Wunsch erfüllt. Branding war erstklassig, Catering hervorragend. 10/10!",
+                stars: 5,
+                initial: "LS",
+              },
+              {
+                name: "Petra Vogel",
+                firma: "Vogel & Friends Marketing",
+                ort: "Köln",
+                text: "Wir wollten etwas anderes als die übliche Weihnachtsfeier — Court & Company hat genau das geliefert. Unsere 40 Mitarbeiter hatten einen unvergesslichen Tag. Nächstes Jahr wieder!",
+                stars: 5,
+                initial: "PV",
+              },
+            ].map((review) => (
+              <div key={review.name} className="bg-cream rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-forest text-cream font-bold text-sm flex items-center justify-center flex-shrink-0">
+                    {review.initial}
+                  </div>
+                  <div>
+                    <p className="font-bold text-anthracite text-sm">{review.name}</p>
+                    <p className="text-anthracite/50 text-xs">{review.firma}</p>
+                  </div>
+                </div>
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(review.stars)].map((_, i) => (
+                    <span key={i} className="text-lime text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-anthracite/70 text-sm leading-relaxed">&ldquo;{review.text}&rdquo;</p>
+                <p className="text-anthracite/30 text-xs mt-3">{review.ort}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Gesamt-Rating */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 bg-forest text-cream rounded-2xl p-8">
+            <div className="text-center">
+              <p className="text-5xl font-extrabold text-lime">5.0</p>
+              <div className="flex gap-1 justify-center my-1">
+                {[...Array(5)].map((_, i) => <span key={i} className="text-lime text-lg">★</span>)}
+              </div>
+              <p className="text-cream/60 text-xs">Durchschnittsbewertung</p>
+            </div>
+            <div className="w-px h-16 bg-white/10 hidden sm:block" />
+            <div className="text-center">
+              <p className="text-5xl font-extrabold">30+</p>
+              <p className="text-cream/60 text-xs mt-1">Erfolgreiche Events</p>
+            </div>
+            <div className="w-px h-16 bg-white/10 hidden sm:block" />
+            <div className="text-center">
+              <p className="text-5xl font-extrabold">500+</p>
+              <p className="text-cream/60 text-xs mt-1">Zufriedene Teilnehmer</p>
+            </div>
+            <div className="w-px h-16 bg-white/10 hidden sm:block" />
+            <div className="text-center">
+              <p className="text-5xl font-extrabold text-lime">100%</p>
+              <p className="text-cream/60 text-xs mt-1">Würden uns empfehlen</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Event Flow */}
       <section className="px-6 py-20 bg-anthracite text-cream">
         <div className="max-w-5xl mx-auto">
