@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Court & Company — Corporate Padel Events",
   description: "Wir organisieren eure komplette Firmenfeier in einer Paddlehalle. Einfach anfragen, wir erledigen den Rest.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: { url: "/favicon-180x180.png" },
+  },
 };
 
 export default function RootLayout({
