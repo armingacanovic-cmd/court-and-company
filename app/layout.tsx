@@ -19,9 +19,11 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
-    apple: { url: "/favicon-180x180.png" },
+    apple: { url: "/apple-touch-icon.png" },
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
