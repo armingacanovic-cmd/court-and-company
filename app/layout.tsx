@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   title: "Court & Company — Corporate Padel Events",
   description: "Wir organisieren eure komplette Firmenfeier in einer Paddlehalle. Einfach anfragen, wir erledigen den Rest.",
   manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
