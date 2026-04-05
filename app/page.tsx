@@ -171,6 +171,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Über uns */}
+      <section className="px-6 py-20 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+            {/* Foto */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-72 h-72 rounded-3xl bg-forest overflow-hidden shadow-xl">
+                  <img
+                    src="/armin.jpg"
+                    alt="Armin Gacanovic — Gründer Court & Company"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                  {/* Fallback Initialen */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-7xl font-extrabold text-cream/20">AG</span>
+                  </div>
+                </div>
+                {/* Dekorativ */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-lime opacity-20" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 rounded-xl bg-sand border-2 border-beige" />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div>
+              <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                Über uns
+              </span>
+              <h2 className="text-4xl font-extrabold mb-6 text-anthracite leading-tight">
+                Padel ist mehr als<br />
+                <span className="text-forest">ein Sport.</span>
+              </h2>
+              <p className="text-anthracite/65 leading-relaxed mb-4 text-sm">
+                Ich bin Armin — und ich habe Court & Company gegründet, weil ich selbst erlebt habe, was Padel mit einem Team macht. Die Energie auf dem Court, das Lachen nach einem knappen Punkt, das Gespräch beim Catering danach — das ist echter Zusammenhalt.
+              </p>
+              <p className="text-anthracite/65 leading-relaxed mb-6 text-sm">
+                Unternehmen, die mehr wollen als das übliche Dinner-Event, finden in uns den richtigen Partner. Ich organisiere jeden Event persönlich — von der ersten Anfrage bis zum letzten Pokal.
+              </p>
+
+              <div className="flex flex-col gap-3">
+                {[
+                  "🎾 Leidenschaftlicher Padel-Spieler seit 2019",
+                  "📋 Über 30 erfolgreich organisierte Events",
+                  "🤝 Persönliche Betreuung von Anfang bis Ende",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-sm text-anthracite/70">
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex items-center gap-4">
+                <div>
+                  <p className="font-extrabold text-anthracite">Armin Gacanovic</p>
+                  <p className="text-xs text-anthracite/50">Gründer, Court & Company · Berlin</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Bewertungen */}
       <section className="px-6 py-20 bg-sand">
         <div className="max-w-5xl mx-auto">
