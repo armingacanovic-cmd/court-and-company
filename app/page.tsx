@@ -19,18 +19,24 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="px-6 pt-24 pb-28 text-center bg-cream relative overflow-hidden">
-        {/* Farbiger Hintergrundakzent */}
-        <div className="absolute inset-0 bg-gradient-to-br from-lime/10 via-cream to-sand pointer-events-none" />
-        <div className="relative z-10">
+      <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+        {/* Hintergrundbild */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/hero-padel.jpg')" }}
+        />
+        {/* Dunkler Overlay für Lesbarkeit */}
+        <div className="absolute inset-0 bg-forest/75" />
+
+        <div className="relative z-10 px-6 py-28">
           <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
             Corporate Padel Events · Deutschland
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-anthracite">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
             Padel Meets<br />
-            <span className="text-forest">Business.</span>
+            <span className="text-lime">Business.</span>
           </h1>
-          <p className="text-lg text-anthracite/65 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed">
             Wir gestalten hochwertige Eventformate für Unternehmen, die ihren Mitarbeitenden,
             Kunden oder Partnern mehr bieten möchten als ein klassisches Get-together.
             Sportliche Aktivierung, stilvolles Ambiente und echtes Networking — vollständig organisiert.
@@ -38,16 +44,23 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/buchen"
-              className="bg-forest text-cream px-8 py-4 rounded-full text-base font-bold hover:bg-lime transition-colors shadow-lg"
+              className="bg-lime text-white px-8 py-4 rounded-full text-base font-bold hover:bg-white hover:text-forest transition-colors shadow-lg"
             >
               Kostenlos anfragen →
             </Link>
             <a
               href="#leistungen"
-              className="border-2 border-anthracite/20 text-anthracite px-8 py-4 rounded-full text-base font-semibold hover:border-forest hover:text-forest transition-colors"
+              className="border-2 border-white/40 text-white px-8 py-4 rounded-full text-base font-semibold hover:border-white hover:bg-white/10 transition-colors"
             >
               Leistungen entdecken
             </a>
+          </div>
+          {/* Vertrauens-Badges */}
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-white/60 text-sm">
+            <span>⭐ 5.0 Bewertung</span>
+            <span>🎾 30+ Events</span>
+            <span>👥 500+ Teilnehmer</span>
+            <span>🇩🇪 Deutschlandweit</span>
           </div>
         </div>
       </section>
