@@ -308,6 +308,150 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pakete */}
+      <section className="px-6 py-20 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            Preisrahmen
+          </span>
+          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unsere Pakete</h2>
+          <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
+            Alle Preise sind Richtwerte — das finale Angebot erstellen wir individuell nach euren Wünschen.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Court",
+                subtitle: "Für kleine Gruppen",
+                persons: "4–16 Personen",
+                price: "ab €500",
+                highlight: false,
+                features: [
+                  "Court-Buchung & Location",
+                  "Turnierorganisation",
+                  "Coaching & Warm-up",
+                  "Moderation",
+                  "Persönliche Betreuung",
+                ],
+              },
+              {
+                name: "Business",
+                subtitle: "Unser Bestseller",
+                persons: "16–30 Personen",
+                price: "ab €1.200",
+                highlight: true,
+                features: [
+                  "Alles aus Court",
+                  "Catering & Getränke",
+                  "DJ & Musik",
+                  "Branding & Merchandise",
+                  "Networking-Bereiche",
+                ],
+              },
+              {
+                name: "Premium",
+                subtitle: "Full-Service",
+                persons: "30–60 Personen",
+                price: "auf Anfrage",
+                highlight: false,
+                features: [
+                  "Alles aus Business",
+                  "Individuelle Inszenierung",
+                  "Siegerehrung & Awards",
+                  "Professionelle Fotografie",
+                  "Komplette Eventleitung",
+                ],
+              },
+            ].map((pkg) => (
+              <div
+                key={pkg.name}
+                className={`rounded-2xl p-8 flex flex-col ${pkg.highlight ? "bg-forest text-cream shadow-xl scale-105" : "bg-sand"}`}
+              >
+                <div className="mb-6">
+                  {pkg.highlight && (
+                    <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+                      Empfohlen
+                    </span>
+                  )}
+                  <h3 className={`text-2xl font-extrabold ${pkg.highlight ? "text-white" : "text-anthracite"}`}>
+                    {pkg.name}
+                  </h3>
+                  <p className={`text-sm mt-1 ${pkg.highlight ? "text-cream/60" : "text-anthracite/50"}`}>
+                    {pkg.subtitle}
+                  </p>
+                  <p className={`text-xs mt-2 font-semibold ${pkg.highlight ? "text-lime" : "text-forest"}`}>
+                    {pkg.persons}
+                  </p>
+                </div>
+                <div className={`text-3xl font-extrabold mb-6 ${pkg.highlight ? "text-lime" : "text-forest"}`}>
+                  {pkg.price}
+                </div>
+                <ul className="space-y-2.5 flex-1">
+                  {pkg.features.map((f) => (
+                    <li key={f} className={`flex items-start gap-2.5 text-sm ${pkg.highlight ? "text-cream/80" : "text-anthracite/70"}`}>
+                      <span className={`mt-0.5 font-bold ${pkg.highlight ? "text-lime" : "text-lime"}`}>✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/buchen"
+                  className={`mt-8 text-center py-3 rounded-full text-sm font-bold transition-colors ${pkg.highlight ? "bg-lime text-white hover:bg-white hover:text-forest" : "bg-forest text-cream hover:bg-lime"}`}
+                >
+                  Jetzt anfragen →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-6 py-20 bg-sand">
+        <div className="max-w-3xl mx-auto">
+          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            FAQ
+          </span>
+          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Häufige Fragen</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: "Brauchen die Teilnehmer Padel-Erfahrung?",
+                a: "Nein — überhaupt nicht. Padel ist in wenigen Minuten erlernbar. Unser Coaching-Team holt alle ab, egal ob Anfänger oder Fortgeschrittene. Das Spiel lebt von Spaß und Dynamik, nicht von Können.",
+              },
+              {
+                q: "Wie viele Personen können teilnehmen?",
+                a: "Wir organisieren Events für 4 bis 60 Personen. Pro Court spielen jeweils 4 Personen. Für größere Gruppen buchen wir mehrere Courts gleichzeitig, damit alle aktiv dabei sind.",
+              },
+              {
+                q: "Wo finden die Events statt?",
+                a: "Wir arbeiten mit professionellen Padel-Anlagen in ganz Deutschland zusammen. Auf Wunsch suchen wir eine Location in eurer Nähe oder in einer Stadt eurer Wahl.",
+              },
+              {
+                q: "Was ist im Preis inbegriffen?",
+                a: "Je nach Paket ist Location, Organisation, Coaching, Catering, DJ und Siegerehrung enthalten. Alle Leistungen sind transparent im Angebot aufgeführt — keine versteckten Kosten.",
+              },
+              {
+                q: "Wie läuft die Buchung ab?",
+                a: "Anfrage stellen → innerhalb von 24h individuelle Rückmeldung → Angebot → Bestätigung. Wir kümmern uns um alles weitere. Ihr erscheint am Eventtag — wir haben alles vorbereitet.",
+              },
+              {
+                q: "Geht das auch für Sportvereine?",
+                a: "Ja, absolut. Vereinsausflüge, Saisonabschluss-Events oder Mitglieder-Turniere — wir organisieren genauso für Vereine wie für Unternehmen. Einfach anfragen und wir finden das passende Format.",
+              },
+            ].map((item, i) => (
+              <details key={i} className="bg-cream rounded-2xl px-6 py-5 group cursor-pointer">
+                <summary className="flex justify-between items-center font-bold text-anthracite text-sm list-none">
+                  {item.q}
+                  <span className="text-forest text-xl font-light ml-4 flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="mt-4 text-anthracite/65 text-sm leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-lime text-white text-center px-6 py-24">
         <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">

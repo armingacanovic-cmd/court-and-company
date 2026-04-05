@@ -158,11 +158,10 @@ export default function BuchenPage() {
                     className="w-full border border-beige/50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest bg-cream"
                   >
                     <option value="">Bitte wählen</option>
-                    <option>10–20 Personen</option>
-                    <option>20–40 Personen</option>
-                    <option>40–60 Personen</option>
-                    <option>60–100 Personen</option>
-                    <option>100+ Personen</option>
+                    <option>4–8 Personen</option>
+                    <option>8–16 Personen</option>
+                    <option>16–30 Personen</option>
+                    <option>30–60 Personen</option>
                   </select>
                 </div>
 
