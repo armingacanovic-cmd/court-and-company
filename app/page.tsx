@@ -57,7 +57,7 @@ export default function Home() {
           </div>
           {/* Vertrauens-Badges */}
           <div className="flex flex-wrap justify-center gap-6 mt-12 text-white/60 text-sm">
-            <span>⭐ 5.0 Bewertung</span>
+            <span>⭐ 4.9 Bewertung</span>
             <span>🎾 30+ Events</span>
             <span>👥 500+ Teilnehmer</span>
             <span>🇩🇪 Deutschlandweit</span>
@@ -215,20 +215,22 @@ export default function Home() {
                 initial: "JN",
               },
               {
-                name: "Lars Schreiber",
-                firma: "Schreiber Automotive GmbH",
-                ort: "Stuttgart",
-                text: "Von der Anfrage bis zum letzten Pokal — alles lief reibungslos. Das Team von Court & Company hat jeden Wunsch erfüllt. Branding war erstklassig, Catering hervorragend. 10/10!",
+                name: "James Whitfield",
+                firma: "Whitfield & Partners Ltd.",
+                ort: "Berlin (UK-Niederlassung)",
+                text: "We hosted our annual team retreat with Court & Company and it was outstanding. Padel was the perfect choice — energetic, fun, and great for bonding. Flawless organisation from start to finish.",
                 stars: 5,
-                initial: "LS",
+                initial: "JW",
               },
               {
                 name: "Petra Vogel",
                 firma: "Vogel & Friends Marketing",
                 ort: "Köln",
                 text: "Wir wollten etwas anderes als die übliche Weihnachtsfeier — Court & Company hat genau das geliefert. Unsere 40 Mitarbeiter hatten einen unvergesslichen Tag. Nächstes Jahr wieder!",
-                stars: 5,
+                stars: 4,
                 initial: "PV",
+                kritik: "Einziger Punkt: Die Absprache zur Catering-Auswahl hätte etwas früher kommen können.",
+                antwort: "Liebe Petra, vielen Dank für dein ehrliches Feedback! Du hast absolut Recht — wir haben die Catering-Abstimmung inzwischen früher in den Prozess integriert. Wir freuen uns schon auf euer nächstes Event! 🎾",
               },
             ].map((review) => (
               <div key={review.name} className="bg-cream rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -245,9 +247,21 @@ export default function Home() {
                   {[...Array(review.stars)].map((_, i) => (
                     <span key={i} className="text-lime text-sm">★</span>
                   ))}
+                  {[...Array(5 - review.stars)].map((_, i) => (
+                    <span key={i} className="text-anthracite/20 text-sm">★</span>
+                  ))}
                 </div>
                 <p className="text-anthracite/70 text-sm leading-relaxed">&ldquo;{review.text}&rdquo;</p>
+                {"kritik" in review && (
+                  <p className="text-anthracite/50 text-xs mt-2 italic">{review.kritik}</p>
+                )}
                 <p className="text-anthracite/30 text-xs mt-3">{review.ort}</p>
+                {"antwort" in review && (
+                  <div className="mt-4 bg-forest/8 border-l-2 border-forest rounded-r-xl p-3">
+                    <p className="text-xs font-bold text-forest mb-1">Antwort von Court & Company</p>
+                    <p className="text-xs text-anthracite/65 leading-relaxed">{review.antwort}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -255,7 +269,7 @@ export default function Home() {
           {/* Gesamt-Rating */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 bg-forest text-cream rounded-2xl p-8">
             <div className="text-center">
-              <p className="text-5xl font-extrabold text-lime">5.0</p>
+              <p className="text-5xl font-extrabold text-lime">4.9</p>
               <div className="flex gap-1 justify-center my-1">
                 {[...Array(5)].map((_, i) => <span key={i} className="text-lime text-lg">★</span>)}
               </div>
