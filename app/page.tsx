@@ -174,64 +174,79 @@ export default function Home() {
       {/* Über uns */}
       <section className="px-6 py-20 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+          <div className="text-center mb-14">
+            <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              Über uns
+            </span>
+            <h2 className="text-4xl font-extrabold text-anthracite leading-tight mb-4">
+              Sport ist unsere<br />
+              <span className="text-forest">Leidenschaft & Expertise.</span>
+            </h2>
+            <p className="text-anthracite/60 text-sm max-w-2xl mx-auto leading-relaxed">
+              Court & Company wurde von zwei passionierten Sportlern gegründet — mit akademischem Hintergrund, praktischer Erfahrung und echtem Verständnis für das, was Events besonders macht.
+            </p>
+          </div>
 
-            {/* Foto */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-72 h-72 rounded-3xl bg-forest overflow-hidden shadow-xl">
-                  <img
-                    src="/armin.jpg"
-                    alt="Armin Gacanovic — Gründer Court & Company"
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Fallback Initialen */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-7xl font-extrabold text-cream/20">AG</span>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            {/* Armin */}
+            <div className="bg-sand rounded-2xl p-8 flex flex-col gap-5">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-2xl bg-forest flex items-center justify-center text-cream font-extrabold text-xl flex-shrink-0">
+                  AG
                 </div>
-                {/* Dekorativ */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-lime opacity-20" />
-                <div className="absolute -top-4 -left-4 w-16 h-16 rounded-xl bg-sand border-2 border-beige" />
+                <div>
+                  <h3 className="font-extrabold text-anthracite text-lg">Armin Gacanovic</h3>
+                  <p className="text-xs text-forest font-semibold">Gründer & Trainer</p>
+                </div>
               </div>
-            </div>
-
-            {/* Text */}
-            <div>
-              <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-                Über uns
-              </span>
-              <h2 className="text-4xl font-extrabold mb-6 text-anthracite leading-tight">
-                Padel ist mehr als<br />
-                <span className="text-forest">ein Sport.</span>
-              </h2>
-              <p className="text-anthracite/65 leading-relaxed mb-4 text-sm">
-                Ich bin Armin — und ich habe Court & Company gegründet, weil ich selbst erlebt habe, was Padel mit einem Team macht. Die Energie auf dem Court, das Lachen nach einem knappen Punkt, das Gespräch beim Catering danach — das ist echter Zusammenhalt.
+              <p className="text-anthracite/65 text-sm leading-relaxed">
+                Armin ist ausgebildeter Sportlehrer (B.A. Sportlehramt, Universität Potsdam) und seit über 2 Jahren als aktiver Trainer tätig. Mit langjähriger Erfahrung in der Arbeit mit Sportstudios bringt er ein tiefes Verständnis für Bewegung, Motivation und Gruppenführung mit — auf dem Court und dahinter.
               </p>
-              <p className="text-anthracite/65 leading-relaxed mb-6 text-sm">
-                Unternehmen, die mehr wollen als das übliche Dinner-Event, finden in uns den richtigen Partner. Ich organisiere jeden Event persönlich — von der ersten Anfrage bis zum letzten Pokal.
-              </p>
-
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 {[
-                  "🎾 Leidenschaftlicher Padel-Spieler seit 2019",
-                  "📋 Über 30 erfolgreich organisierte Events",
-                  "🤝 Persönliche Betreuung von Anfang bis Ende",
+                  "🎓 B.A. Sportlehramt, Universität Potsdam",
+                  "🏋️ Langjährige Erfahrung in Sportstudios",
+                  "🎾 Trainer & Coach seit über 2 Jahren",
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-sm text-anthracite/70">
-                    <span>{item}</span>
-                  </div>
+                  <p key={item} className="text-xs text-anthracite/60">{item}</p>
                 ))}
               </div>
+            </div>
 
-              <div className="mt-8 flex items-center gap-4">
-                <div>
-                  <p className="font-extrabold text-anthracite">Armin Gacanovic</p>
-                  <p className="text-xs text-anthracite/50">Gründer, Court & Company · Berlin</p>
+            {/* Niklas */}
+            <div className="bg-sand rounded-2xl p-8 flex flex-col gap-5">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-2xl bg-lime flex items-center justify-center text-white font-extrabold text-xl flex-shrink-0">
+                  NW
                 </div>
+                <div>
+                  <h3 className="font-extrabold text-anthracite text-lg">Niklas Wasgint</h3>
+                  <p className="text-xs text-forest font-semibold">Gründer & Eventmanagement</p>
+                </div>
+              </div>
+              <p className="text-anthracite/65 text-sm leading-relaxed">
+                Niklas bringt den strategischen Blick für Organisation und Eventplanung mit. Als Absolvent des Sportmanagement-Studiums (B.A., Universität Potsdam) verbindet er sportliche Leidenschaft mit betriebswirtschaftlichem Know-how — und sorgt dafür, dass jeder Event reibungslos läuft.
+              </p>
+              <div className="flex flex-col gap-2">
+                {[
+                  "🎓 B.A. Sportmanagement, Universität Potsdam",
+                  "📋 Spezialist für Eventorganisation & Planung",
+                  "🤝 Experte für B2B-Eventformate",
+                ].map((item) => (
+                  <p key={item} className="text-xs text-anthracite/60">{item}</p>
+                ))}
               </div>
             </div>
 
+          </div>
+
+          {/* Gemeinsamer Claim */}
+          <div className="mt-8 bg-forest text-cream rounded-2xl p-8 text-center">
+            <p className="text-lg font-bold mb-2">Zwei Absolventen. Eine Mission.</p>
+            <p className="text-cream/65 text-sm max-w-xl mx-auto">
+              Wir vereinen Trainerkompetenz, Sportmanagement und echte Padel-Begeisterung — für Events, die man nicht so schnell vergisst.
+            </p>
           </div>
         </div>
       </section>
