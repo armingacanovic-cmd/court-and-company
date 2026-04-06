@@ -184,9 +184,6 @@ export default function Home() {
                     src="/armin.jpg"
                     alt="Armin Gacanovic — Gründer Court & Company"
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
                   />
                   {/* Fallback Initialen */}
                   <div className="absolute inset-0 flex items-center justify-center">
