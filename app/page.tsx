@@ -387,7 +387,7 @@ export default function Home() {
       <section id="pakete" className="px-6 py-20 bg-cream">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-            Preisrahmen
+            Pakete
           </span>
           <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unsere Pakete</h2>
           <p className="text-anthracite/55 max-w-2xl mb-14 text-sm leading-relaxed">
@@ -398,12 +398,13 @@ export default function Home() {
               {
                 name: "Court",
                 subtitle: "Kompakter Einstieg für hochwertige Team-Events",
-                price: "Auf Anfrage",
+                price: "",
                 highlight: false,
                 features: [
                   "Court-Buchung & Location",
                   "Turnierorganisation",
                   "Coaching & Warm-up",
+                  "Equipment & Ausstattung",
                   "Moderation",
                   "Persönliche Betreuung",
                 ],
@@ -411,7 +412,7 @@ export default function Home() {
               {
                 name: "Business",
                 subtitle: "Unser Bestseller für stilvolle Firmen-Events",
-                price: "Auf Anfrage",
+                price: "",
                 highlight: true,
                 features: [
                   "Alles aus Court",
@@ -424,7 +425,7 @@ export default function Home() {
               {
                 name: "Premium",
                 subtitle: "Individuell inszeniertes Signature-Event",
-                price: "Auf Anfrage",
+                price: "",
                 highlight: false,
                 features: [
                   "Alles aus Business",
@@ -452,9 +453,11 @@ export default function Home() {
                     {pkg.subtitle}
                   </p>
                 </div>
-                <div className={`text-3xl font-extrabold mb-6 ${pkg.highlight ? "text-lime" : "text-forest"}`}>
-                  {pkg.price}
-                </div>
+                {pkg.price && (
+                  <div className={`text-3xl font-extrabold mb-6 ${pkg.highlight ? "text-lime" : "text-forest"}`}>
+                    {pkg.price}
+                  </div>
+                )}
                 <ul className="space-y-2.5 flex-1">
                   {pkg.features.map((f) => (
                     <li key={f} className={`flex items-start gap-2.5 text-sm ${pkg.highlight ? "text-cream/80" : "text-anthracite/70"}`}>
