@@ -41,7 +41,7 @@ export default function NavMenu() {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-72 bg-cream z-50 shadow-2xl transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-72 bg-cream z-50 shadow-2xl transform transition-all duration-500 ease-in-out ${open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-beige/30">
@@ -58,7 +58,7 @@ export default function NavMenu() {
         </div>
 
         {/* Links */}
-        <nav className="px-6 py-6 flex flex-col gap-1">
+        <nav className="px-6 pt-10 pb-6 flex flex-col gap-1">
           {links.map((link) =>
             link.cta ? (
               <Link
