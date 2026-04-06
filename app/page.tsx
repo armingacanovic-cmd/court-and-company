@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NavMenu from "./components/NavMenu";
+import ReviewCard from "./components/ReviewCard";
 
 export default function Home() {
   return (
@@ -322,36 +323,7 @@ export default function Home() {
                 antwort: "Liebe Cornelia, herzlichen Dank für dein offenes Feedback! Du hast absolut Recht — wir haben die Catering-Abstimmung inzwischen deutlich früher in den Prozess integriert. Wir freuen uns schon auf euer nächstes Event! 🙌",
               },
             ].map((review) => (
-              <div key={review.name} className="bg-cream rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-forest text-cream font-bold text-sm flex items-center justify-center flex-shrink-0">
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="font-bold text-anthracite text-sm">{review.name}</p>
-                    <p className="text-anthracite/50 text-xs">{review.firma}</p>
-                  </div>
-                </div>
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(review.stars)].map((_, i) => (
-                    <span key={i} className="text-lime text-sm">★</span>
-                  ))}
-                  {[...Array(5 - review.stars)].map((_, i) => (
-                    <span key={i} className="text-anthracite/20 text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-anthracite/70 text-sm leading-relaxed">&ldquo;{review.text}&rdquo;</p>
-                {"kritik" in review && (
-                  <p className="text-anthracite/50 text-xs mt-2 italic">{review.kritik}</p>
-                )}
-                <p className="text-anthracite/30 text-xs mt-3">{review.ort}</p>
-                {"antwort" in review && (
-                  <div className="mt-4 bg-forest/8 border-l-2 border-forest rounded-r-xl p-3">
-                    <p className="text-xs font-bold text-forest mb-1">Antwort von Court & Company</p>
-                    <p className="text-xs text-anthracite/65 leading-relaxed">{review.antwort}</p>
-                  </div>
-                )}
-              </div>
+              <ReviewCard key={review.name} review={review} />
             ))}
           </div>
 
