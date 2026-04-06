@@ -225,7 +225,7 @@ export default function Home() {
                   NW
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-anthracite text-lg">Niklas Wasgint</h3>
+                  <h3 className="font-extrabold text-anthracite text-lg">Niklas Linhardt</h3>
                   <p className="text-xs text-forest font-semibold">Gründer & Eventmanagement</p>
                 </div>
               </div>
