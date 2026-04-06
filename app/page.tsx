@@ -390,16 +390,15 @@ export default function Home() {
             Preisrahmen
           </span>
           <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unsere Pakete</h2>
-          <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
-            Alle Preise sind Richtwerte — das finale Angebot erstellen wir individuell nach euren Wünschen.
+          <p className="text-anthracite/55 max-w-2xl mb-14 text-sm leading-relaxed">
+            Alle Preise sind Richtwerte. Jedes Event wird individuell nach Teilnehmerzahl, Dauer, Location und gewünschten Extras kalkuliert. Alle Pakete sind ab 4 Personen buchbar.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 name: "Court",
-                subtitle: "Für kleine Gruppen",
-                persons: "4–16 Personen",
-                price: "ab €500",
+                subtitle: "Kompakter Einstieg für hochwertige Team-Events",
+                price: "ab 990 €",
                 highlight: false,
                 features: [
                   "Court-Buchung & Location",
@@ -411,23 +410,21 @@ export default function Home() {
               },
               {
                 name: "Business",
-                subtitle: "Unser Bestseller",
-                persons: "16–30 Personen",
-                price: "ab €1.200",
+                subtitle: "Unser Bestseller für stilvolle Firmen-Events",
+                price: "ab 1.990 €",
                 highlight: true,
                 features: [
                   "Alles aus Court",
                   "Catering & Getränke",
                   "DJ & Musik",
                   "Branding & Merchandise",
-                  "Networking-Bereiche",
+                  "Networking-Bereich",
                 ],
               },
               {
                 name: "Premium",
-                subtitle: "Full-Service",
-                persons: "30–60 Personen",
-                price: "auf Anfrage",
+                subtitle: "Individuell inszeniertes Signature-Event",
+                price: "ab 3.990 €",
                 highlight: false,
                 features: [
                   "Alles aus Business",
@@ -445,17 +442,14 @@ export default function Home() {
                 <div className="mb-6">
                   {pkg.highlight && (
                     <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-                      Empfohlen
+                      Bestseller
                     </span>
                   )}
                   <h3 className={`text-2xl font-extrabold ${pkg.highlight ? "text-white" : "text-anthracite"}`}>
                     {pkg.name}
                   </h3>
-                  <p className={`text-sm mt-1 ${pkg.highlight ? "text-cream/60" : "text-anthracite/50"}`}>
+                  <p className={`text-sm mt-1 leading-snug ${pkg.highlight ? "text-cream/60" : "text-anthracite/50"}`}>
                     {pkg.subtitle}
-                  </p>
-                  <p className={`text-xs mt-2 font-semibold ${pkg.highlight ? "text-lime" : "text-forest"}`}>
-                    {pkg.persons}
                   </p>
                 </div>
                 <div className={`text-3xl font-extrabold mb-6 ${pkg.highlight ? "text-lime" : "text-forest"}`}>
@@ -464,7 +458,7 @@ export default function Home() {
                 <ul className="space-y-2.5 flex-1">
                   {pkg.features.map((f) => (
                     <li key={f} className={`flex items-start gap-2.5 text-sm ${pkg.highlight ? "text-cream/80" : "text-anthracite/70"}`}>
-                      <span className={`mt-0.5 font-bold ${pkg.highlight ? "text-lime" : "text-lime"}`}>✓</span>
+                      <span className="mt-0.5 font-bold text-lime">✓</span>
                       {f}
                     </li>
                   ))}
@@ -478,6 +472,11 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Hinweis */}
+          <p className="mt-10 text-center text-anthracite/45 text-xs leading-relaxed max-w-2xl mx-auto">
+            Zusätzliche Leistungen wie Branding, Foto/Video, Catering-Upgrades oder individuelle Inszenierung kalkulieren wir passend zu eurem Event.
+          </p>
         </div>
       </section>
 
