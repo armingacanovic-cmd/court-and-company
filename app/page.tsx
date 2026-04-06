@@ -61,7 +61,7 @@ export default function Home() {
           </div>
           {/* Vertrauens-Badges */}
           <div className="flex flex-wrap justify-center gap-6 mt-12 text-white/60 text-sm">
-            <span>⭐ 4.9 Bewertung</span>
+            <span>⭐ 4.8 Bewertung</span>
             <span>🎾 30+ Events</span>
             <span>👥 500+ Teilnehmer</span>
             <span>🇩🇪 Deutschlandweit</span>
@@ -267,54 +267,59 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                name: "Markus Bauer",
-                firma: "Bauer & Partner Consulting GmbH",
+                name: "Konstantin Ehrhardt",
+                firma: "Ehrhardt Strategy Consulting GmbH",
                 ort: "München",
                 text: "Absolut begeistert! Unser Team-Event war ein voller Erfolg. Die Organisation war perfekt, das Catering top und die Atmosphäre einfach großartig. Alle Mitarbeiter reden noch heute davon.",
                 stars: 5,
-                initial: "MB",
+                initial: "KE",
+                antwort: "Lieber Konstantin, herzlichen Dank für dieses tolle Feedback! Es war uns eine echte Freude, euer Team auf dem Court zu begrüßen. Genau solche Rückmeldungen treiben uns an. Wir freuen uns auf ein Wiedersehen! 🎾",
               },
               {
-                name: "Sandra Hoffmann",
-                firma: "Hoffmann Digital AG",
+                name: "Valentina Szczepańska",
+                firma: "Szczepańska Digital Studios",
                 ort: "Hamburg",
                 text: "Wir haben Court & Company für unser Kunden-Event gebucht und waren von Anfang bis Ende begeistert. Professionelle Abwicklung, herzliches Team und ein unvergesslicher Abend. Sehr gerne wieder!",
                 stars: 5,
-                initial: "SH",
+                initial: "VS",
+                antwort: "Liebe Valentina, was für eine schöne Rückmeldung — danke! Eure Gruppe hat den Court wirklich zum Leuchten gebracht. Wir freuen uns schon sehr auf die nächste Runde mit euch! 🙌",
               },
               {
-                name: "Thomas Klein",
-                firma: "Klein Immobilien GmbH",
+                name: "Leopold Brinkmann-Vogt",
+                firma: "Brinkmann-Vogt Immobilien AG",
                 ort: "Berlin",
                 text: "Das perfekte Format für moderne Firmenfeiern. Kein langweiliges Dinner, sondern echtes Erlebnis mit Spaßfaktor. Unsere Partner waren restlos begeistert. Klare Empfehlung!",
                 stars: 5,
-                initial: "TK",
+                initial: "LB",
+                antwort: "Lieber Leopold, vielen Dank! Kein langweiliges Dinner — genau das ist unsere Mission. Sehr schön zu hören, dass eure Partner genauso begeistert waren wie ihr. Bis zum nächsten Event! 🏆",
               },
               {
-                name: "Julia Neumann",
-                firma: "Neumann & Söhne KG",
+                name: "Miroslava Deckert",
+                firma: "Deckert & Söhne Familienholding",
                 ort: "Frankfurt",
                 text: "Endlich eine Firmenfeier, die wirklich Spaß macht! Padel war der perfekte Rahmen — auch für Anfänger wie uns. Die Coaches waren super geduldig und das Event wurde 1A organisiert.",
                 stars: 5,
-                initial: "JN",
+                initial: "MD",
+                antwort: "Liebe Miroslava, das freut uns riesig! Unser Coaching-Team legt besonders viel Wert darauf, alle Spielniveaus abzuholen. Schön, dass sich das so deutlich gezeigt hat. Gerne wieder! 🎾",
               },
               {
-                name: "James Whitfield",
-                firma: "Whitfield & Partners Ltd.",
+                name: "Alistair Pemberton",
+                firma: "Pemberton & Associates Ltd.",
                 ort: "Berlin (UK-Niederlassung)",
                 text: "We hosted our annual team retreat with Court & Company and it was outstanding. Padel was the perfect choice — energetic, fun, and great for bonding. Flawless organisation from start to finish.",
                 stars: 5,
-                initial: "JW",
+                initial: "AP",
+                antwort: "Dear Alistair, thank you so much for this wonderful review! It was a genuine pleasure hosting your team — the energy was contagious. We'd love to welcome you back anytime! 🎾",
               },
               {
-                name: "Petra Vogel",
-                firma: "Vogel & Friends Marketing",
+                name: "Cornelia Zierath",
+                firma: "Zierath & Friends Creative Agency",
                 ort: "Köln",
                 text: "Wir wollten etwas anderes als die übliche Weihnachtsfeier — Court & Company hat genau das geliefert. Unsere 40 Mitarbeiter hatten einen unvergesslichen Tag. Nächstes Jahr wieder!",
                 stars: 4,
-                initial: "PV",
+                initial: "CZ",
                 kritik: "Einziger Punkt: Die Absprache zur Catering-Auswahl hätte etwas früher kommen können.",
-                antwort: "Liebe Petra, vielen Dank für dein ehrliches Feedback! Du hast absolut Recht — wir haben die Catering-Abstimmung inzwischen früher in den Prozess integriert. Wir freuen uns schon auf euer nächstes Event! 🎾",
+                antwort: "Liebe Cornelia, herzlichen Dank für dein offenes Feedback! Du hast absolut Recht — wir haben die Catering-Abstimmung inzwischen deutlich früher in den Prozess integriert. Wir freuen uns schon auf euer nächstes Event! 🙌",
               },
             ].map((review) => (
               <div key={review.name} className="bg-cream rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -353,7 +358,7 @@ export default function Home() {
           {/* Gesamt-Rating */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 bg-forest text-cream rounded-2xl p-8">
             <div className="text-center">
-              <p className="text-5xl font-extrabold text-lime">4.9</p>
+              <p className="text-5xl font-extrabold text-lime">4.8</p>
               <div className="flex gap-1 justify-center my-1">
                 {[...Array(5)].map((_, i) => <span key={i} className="text-lime text-lg">★</span>)}
               </div>
