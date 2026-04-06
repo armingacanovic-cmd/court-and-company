@@ -1,14 +1,18 @@
 import Link from "next/link";
+import NavMenu from "./components/NavMenu";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-cream text-anthracite">
 
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-5 bg-cream border-b border-beige/30 sticky top-0 z-50">
-        <div>
-          <span className="text-2xl font-extrabold tracking-tight text-forest">Court</span>
-          <span className="text-2xl font-light tracking-tight text-anthracite"> & Company</span>
+      <nav id="top" className="flex items-center justify-between px-8 py-5 bg-cream border-b border-beige/30 sticky top-0 z-50">
+        <div className="flex items-center gap-3">
+          <NavMenu />
+          <div>
+            <span className="text-2xl font-extrabold tracking-tight text-forest">Court</span>
+            <span className="text-2xl font-light tracking-tight text-anthracite"> & Company</span>
+          </div>
         </div>
         <Link
           href="/buchen"
@@ -66,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* Warum Padel */}
-      <section className="bg-forest text-cream px-6 py-20">
+      <section id="warum" className="bg-forest text-cream px-6 py-20">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Der Unterschied
@@ -91,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* Für wen */}
-      <section className="px-6 py-20 bg-sand">
+      <section id="fuerwen" className="px-6 py-20 bg-sand">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Zielgruppen
@@ -172,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* Über uns */}
-      <section className="px-6 py-20 bg-cream">
+      <section id="ueber" className="px-6 py-20 bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
@@ -252,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* Bewertungen */}
-      <section className="px-6 py-20 bg-sand">
+      <section id="bewertungen" className="px-6 py-20 bg-sand">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Kundenstimmen
@@ -403,7 +407,7 @@ export default function Home() {
       </section>
 
       {/* Pakete */}
-      <section className="px-6 py-20 bg-cream">
+      <section id="pakete" className="px-6 py-20 bg-cream">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Preisrahmen
@@ -501,7 +505,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="px-6 py-20 bg-sand">
+      <section id="faq" className="px-6 py-20 bg-sand">
         <div className="max-w-3xl mx-auto">
           <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             FAQ
