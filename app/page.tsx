@@ -268,7 +268,7 @@ export default function Home() {
             {[
               {
                 name: "Konstantin Ehrhardt",
-                firma: "Ehrhardt Strategy Consulting GmbH",
+                firma: "Nordlicht Strategy Consulting GmbH",
                 ort: "München",
                 text: "Absolut begeistert! Unser Team-Event war ein voller Erfolg. Die Organisation war perfekt, das Catering top und die Atmosphäre einfach großartig. Alle Mitarbeiter reden noch heute davon.",
                 stars: 5,
@@ -277,7 +277,7 @@ export default function Home() {
               },
               {
                 name: "Valentina Szczepańska",
-                firma: "Szczepańska Digital Studios",
+                firma: "Pulse Digital Studios GmbH",
                 ort: "Hamburg",
                 text: "Wir haben Court & Company für unser Kunden-Event gebucht und waren von Anfang bis Ende begeistert. Professionelle Abwicklung, herzliches Team und ein unvergesslicher Abend. Sehr gerne wieder!",
                 stars: 5,
@@ -286,7 +286,7 @@ export default function Home() {
               },
               {
                 name: "Leopold Brinkmann-Vogt",
-                firma: "Brinkmann-Vogt Immobilien AG",
+                firma: "Stadtquartier Immobilien AG",
                 ort: "Berlin",
                 text: "Das perfekte Format für moderne Firmenfeiern. Kein langweiliges Dinner, sondern echtes Erlebnis mit Spaßfaktor. Unsere Partner waren restlos begeistert. Klare Empfehlung!",
                 stars: 5,
@@ -295,7 +295,7 @@ export default function Home() {
               },
               {
                 name: "Miroslava Deckert",
-                firma: "Deckert & Söhne Familienholding",
+                firma: "Velox Gruppe GmbH",
                 ort: "Frankfurt",
                 text: "Endlich eine Firmenfeier, die wirklich Spaß macht! Padel war der perfekte Rahmen — auch für Anfänger wie uns. Die Coaches waren super geduldig und das Event wurde 1A organisiert.",
                 stars: 5,
@@ -304,7 +304,7 @@ export default function Home() {
               },
               {
                 name: "Alistair Pemberton",
-                firma: "Pemberton & Associates Ltd.",
+                firma: "Greywood & Associates Ltd.",
                 ort: "Berlin (UK-Niederlassung)",
                 text: "We hosted our annual team retreat with Court & Company and it was outstanding. Padel was the perfect choice — energetic, fun, and great for bonding. Flawless organisation from start to finish.",
                 stars: 5,
@@ -313,7 +313,7 @@ export default function Home() {
               },
               {
                 name: "Cornelia Zierath",
-                firma: "Zierath & Friends Creative Agency",
+                firma: "Studio Kreativwerk GmbH",
                 ort: "Köln",
                 text: "Wir wollten etwas anderes als die übliche Weihnachtsfeier — Court & Company hat genau das geliefert. Unsere 40 Mitarbeiter hatten einen unvergesslichen Tag. Nächstes Jahr wieder!",
                 stars: 4,
