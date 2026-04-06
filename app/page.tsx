@@ -496,7 +496,7 @@ export default function Home() {
               },
               {
                 q: "Wie viele Personen können teilnehmen?",
-                a: "Wir organisieren Events für 4 bis 60 Personen. Pro Court spielen jeweils 4 Personen. Für größere Gruppen buchen wir mehrere Courts gleichzeitig, damit alle aktiv dabei sind.",
+                a: "Wir organisieren Events für 4 bis 60 Personen. Pro Court spielen jeweils 4 Personen. Für größere Gruppen buchen wir mehrere Courts gleichzeitig, damit alle aktiv dabei sind. Bei besonderem Bedarf können wir auch ganze Padel-Locations exklusiv anmieten — für ein rundum privates Event-Erlebnis.",
               },
               {
                 q: "Wo finden die Events statt?",
