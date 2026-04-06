@@ -26,9 +26,9 @@ export default function NavMenu() {
         className="flex flex-col justify-center gap-1.5 w-9 h-9 p-1.5 rounded-lg hover:bg-sand transition-colors"
         aria-label="Menü öffnen"
       >
-        <span className={`block h-0.5 bg-anthracite rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
-        <span className={`block h-0.5 bg-anthracite rounded transition-all duration-300 ${open ? "opacity-0" : ""}`} />
-        <span className={`block h-0.5 bg-anthracite rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+        <span className={`block h-0.5 bg-forest rounded transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
+        <span className={`block h-0.5 bg-forest rounded transition-all duration-300 ${open ? "opacity-0" : ""}`} />
+        <span className={`block h-0.5 bg-forest rounded transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
       </button>
 
       {/* Overlay */}
