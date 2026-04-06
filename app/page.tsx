@@ -165,11 +165,11 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[160px] ${i % 3 === 0 || i === 5 ? "bg-forest text-cream" : "bg-sand"}`}
+                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[160px] ${[0,2,5,7].includes(i) ? "bg-forest text-cream" : "bg-sand"}`}
               >
                 <span className="text-2xl mb-3 block">{item.icon}</span>
-                <h3 className={`font-extrabold mb-2 ${i % 3 === 0 || i === 5 ? "text-lime" : "text-forest"}`}>{item.title}</h3>
-                <p className={`text-sm leading-relaxed ${i % 3 === 0 || i === 5 ? "text-cream/70" : "text-anthracite/60"}`}>{item.desc}</p>
+                <h3 className={`font-extrabold mb-2 ${[0,2,5,7].includes(i) ? "text-lime" : "text-forest"}`}>{item.title}</h3>
+                <p className={`text-sm leading-relaxed ${[0,2,5,7].includes(i) ? "text-cream/70" : "text-anthracite/60"}`}>{item.desc}</p>
               </div>
             ))}
           </div>
