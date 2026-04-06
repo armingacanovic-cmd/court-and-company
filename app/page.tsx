@@ -9,10 +9,10 @@ export default function Home() {
       <nav id="top" className="flex items-center justify-between px-8 py-5 bg-cream border-b border-beige/30 sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <NavMenu />
-          <Link href="/">
+          <a href="#top">
             <span className="text-2xl font-extrabold tracking-tight text-forest">Court</span>
             <span className="text-2xl font-light tracking-tight text-anthracite"> & Company</span>
-          </Link>
+          </a>
         </div>
         <Link
           href="/buchen"
