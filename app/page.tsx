@@ -154,18 +154,18 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: "📍", title: "Location", desc: "Hochwertige Padel-Locations, vollständige Court-Koordination und professionelles Set-up." },
+              { icon: "📍", title: "Location", desc: "Hochwertige Padel-Locations, Court-Koordination und professionelles Set-up." },
               { icon: "📋", title: "Organisation", desc: "Ablaufplanung, Turnierformate, Moderation und Ergebniserfassung." },
-              { icon: "🎾", title: "Coaching", desc: "Trainer vor Ort, Warm-up, Einführung für Einsteiger aller Spielniveaus." },
+              { icon: "🎾", title: "Coaching", desc: "Trainer vor Ort, Warm-up und Einführung für alle Spielniveaus." },
               { icon: "🍽️", title: "Catering", desc: "Hochwertiges Catering, Getränke, Snacks und kulinarischer Abschluss." },
-              { icon: "🎵", title: "Entertainment", desc: "DJ, Moderation, Musik und atmosphärische Gestaltung." },
-              { icon: "🎨", title: "Branding", desc: "Logo-Flächen, Shirts, Caps, Paddlebälle und individuelle Inszenierung." },
-              { icon: "💬", title: "Networking", desc: "Lounge-Bereiche, Networking-Slots und professioneller Austausch." },
-              { icon: "🏆", title: "Siegerehrung", desc: "Siegertrophäen, emotionale Abschlussmomente und gebrandete Awards." },
+              { icon: "🎵", title: "Entertainment", desc: "DJ, Live-Musik, Moderation und atmosphärische Eventgestaltung." },
+              { icon: "🎨", title: "Branding", desc: "Logo-Flächen, Shirts, Caps, Bälle und individuelle Inszenierung." },
+              { icon: "💬", title: "Networking", desc: "Lounge-Bereiche, Networking-Slots und gezielter Austausch." },
+              { icon: "🏆", title: "Siegerehrung", desc: "Pokale, emotionale Abschlussmomente und gebrandete Awards." },
             ].map((item, i) => (
               <div
                 key={item.title}
-                className={`rounded-2xl p-6 hover:shadow-md transition-shadow ${i % 3 === 0 || i === 5 ? "bg-forest text-cream" : "bg-sand"}`}
+                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[160px] ${i % 3 === 0 || i === 5 ? "bg-forest text-cream" : "bg-sand"}`}
               >
                 <span className="text-2xl mb-3 block">{item.icon}</span>
                 <h3 className={`font-extrabold mb-2 ${i % 3 === 0 || i === 5 ? "text-lime" : "text-forest"}`}>{item.title}</h3>
