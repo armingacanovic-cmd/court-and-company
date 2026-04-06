@@ -223,7 +223,7 @@ export default function Home() {
             <div className="bg-sand rounded-2xl p-8 flex flex-col gap-5">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-2xl bg-lime flex items-center justify-center text-white font-extrabold text-xl flex-shrink-0">
-                  NW
+                  NL
                 </div>
                 <div>
                   <h3 className="font-extrabold text-anthracite text-lg">Niklas Linhardt</h3>
