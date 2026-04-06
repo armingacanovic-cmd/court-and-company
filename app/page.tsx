@@ -391,14 +391,14 @@ export default function Home() {
           </span>
           <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unsere Pakete</h2>
           <p className="text-anthracite/55 max-w-2xl mb-14 text-sm leading-relaxed">
-            Alle Preise sind Richtwerte. Jedes Event wird individuell nach Teilnehmerzahl, Dauer, Location und gewünschten Extras kalkuliert. Alle Pakete sind ab 4 Personen buchbar.
+            Jedes Event wird individuell nach Teilnehmerzahl, Dauer, Location und gewünschten Extras kalkuliert. Alle Pakete sind ab 4 Personen buchbar — wir erstellen euch gerne ein maßgeschneidertes Angebot.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 name: "Court",
                 subtitle: "Kompakter Einstieg für hochwertige Team-Events",
-                price: "ab 990 €",
+                price: "Auf Anfrage",
                 highlight: false,
                 features: [
                   "Court-Buchung & Location",
@@ -411,7 +411,7 @@ export default function Home() {
               {
                 name: "Business",
                 subtitle: "Unser Bestseller für stilvolle Firmen-Events",
-                price: "ab 1.990 €",
+                price: "Auf Anfrage",
                 highlight: true,
                 features: [
                   "Alles aus Court",
@@ -424,7 +424,7 @@ export default function Home() {
               {
                 name: "Premium",
                 subtitle: "Individuell inszeniertes Signature-Event",
-                price: "ab 3.990 €",
+                price: "Auf Anfrage",
                 highlight: false,
                 features: [
                   "Alles aus Business",
