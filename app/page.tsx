@@ -175,7 +175,7 @@ export default function Home() {
               {
                 icon: "🎬",
                 title: "Nachbereitung",
-                desc: "Aftermovie, Fotoauswahl, Social Recap und Highlight-Content — damit der Event nachhaltig in Erinnerung bleibt.",
+                desc: "Aftermovie, Fotoauswahl, Social Recap und Highlight-Content — damit das Event nachhaltig in Erinnerung bleibt.",
               },
               {
                 icon: "✅",
@@ -186,11 +186,11 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[170px] ${[1,3].includes(i) ? "bg-forest text-cream" : item.highlight ? "bg-lime text-white" : "bg-sand"}`}
+                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[170px] ${[1,3,5].includes(i) ? "bg-forest text-cream" : "bg-sand"}`}
               >
                 <span className="text-2xl mb-3 block">{item.icon}</span>
-                <h3 className={`font-extrabold mb-2 ${[1,3].includes(i) ? "text-lime" : item.highlight ? "text-white" : "text-forest"}`}>{item.title}</h3>
-                <p className={`text-sm leading-relaxed ${[1,3].includes(i) ? "text-cream/70" : item.highlight ? "text-white/85" : "text-anthracite/60"}`}>{item.desc}</p>
+                <h3 className={`font-extrabold mb-2 ${[1,3,5].includes(i) ? "text-lime" : "text-forest"}`}>{item.title}</h3>
+                <p className={`text-sm leading-relaxed ${[1,3,5].includes(i) ? "text-cream/70" : "text-anthracite/60"}`}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -252,7 +252,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-anthracite/65 text-sm leading-relaxed">
-                Niklas bringt den strategischen Blick für Organisation und Eventplanung mit. Als Absolvent des Sportmanagement-Studiums (B.A., Universität Potsdam) verbindet er sportliche Leidenschaft mit betriebswirtschaftlichem Know-how — und sorgt dafür, dass jeder Event reibungslos läuft.
+                Niklas bringt den strategischen Blick für Organisation und Eventplanung mit. Als Absolvent des Sportmanagement-Studiums (B.A., Universität Potsdam) verbindet er sportliche Leidenschaft mit betriebswirtschaftlichem Know-how — und sorgt dafür, dass jedes Event reibungslos läuft.
               </p>
               <div className="flex flex-col gap-2">
                 {[
