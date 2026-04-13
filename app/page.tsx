@@ -111,33 +111,29 @@ export default function Home() {
                 title: "Teambuilding & Mitarbeiterbindung",
                 desc: "Für Unternehmen, die Mitarbeitende aktivieren, bereichsübergreifenden Austausch fördern und Wertschätzung erlebbar machen möchten.",
                 icon: "🏢",
-                accent: "bg-lime",
               },
               {
                 title: "Kundenevents & Kundenbindung",
                 desc: "Für Unternehmen, die Bestandskunden in einem exklusiven und persönlichen Rahmen enger an ihre Marke binden möchten.",
                 icon: "🌟",
-                accent: "bg-forest",
               },
               {
                 title: "Partner- & Netzwerkveranstaltungen",
                 desc: "Für Unternehmen, die Geschäftspartner, Multiplikatoren oder B2B-Kontakte in einem modernen Format zusammenbringen möchten.",
                 icon: "🤝",
-                accent: "bg-beige",
               },
               {
                 title: "Employer Branding & Recruiting",
                 desc: "Für Unternehmen, die sich als attraktiver Arbeitgeber positionieren und Young Professionals durch ein zeitgemäßes Format ansprechen möchten.",
                 icon: "🏅",
-                accent: "bg-lime",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-forest text-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className={`w-12 h-12 ${item.accent} rounded-xl flex items-center justify-center text-2xl mb-5 flex-shrink-0`}>
+              <div key={item.title} className="bg-cream border border-forest/15 rounded-2xl p-8 shadow-sm hover:shadow-md hover:border-forest/40 transition-all flex flex-col">
+                <div className="w-12 h-12 bg-forest/10 rounded-xl flex items-center justify-center text-2xl mb-5 flex-shrink-0">
                   {item.icon}
                 </div>
-                <h3 className="text-base font-extrabold mb-3 text-lime uppercase tracking-wide leading-snug">{item.title}</h3>
-                <p className="text-cream/70 leading-relaxed text-sm">{item.desc}</p>
+                <h3 className="text-base font-extrabold mb-3 text-forest uppercase tracking-wide leading-snug">{item.title}</h3>
+                <p className="text-anthracite/60 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -152,26 +148,49 @@ export default function Home() {
           </span>
           <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unser Leistungsumfang</h2>
           <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
-            Sie definieren Ziel, Anlass und Teilnehmerkreis — wir übernehmen die vollständige Konzeption und Umsetzung. Von der Locationauswahl bis zum letzten Programmpunkt.
+            Sie definieren Ziel, Anlass und Teilnehmerkreis — wir übernehmen die vollständige Konzeption und Umsetzung. Von der ersten Idee bis zum letzten Programmpunkt.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { icon: "📍", title: "Location", desc: "Selektion und Buchung exklusiver Padel-Anlagen, Court-Koordination sowie vollständiges Set-up inklusive Beschilderung und Ausstattung." },
-              { icon: "📋", title: "Organisation", desc: "Strukturiertes Ablauf- und Zeitmanagement, maßgeschneiderte Turnierformate, professionelle Moderation und lückenlose Ergebniserfassung." },
-              { icon: "🎾", title: "Coaching", desc: "Qualifizierte Trainer vor Ort, strukturiertes Warm-up-Programm und niveaugerechte Einführung für alle Spielstärken." },
-              { icon: "🍽️", title: "Catering", desc: "Hochwertige Verpflegungskonzepte, Getränkebegleitung, Snack-Stationen und kulinarischer Eventabschluss nach Maß." },
-              { icon: "🎵", title: "Entertainment", desc: "Professionelle DJ-Betreuung, atmosphärische Beschallung und stimmungsvolle Bühnengestaltung für den gesamten Eventverlauf." },
-              { icon: "🎨", title: "Branding", desc: "Corporate-konforme Logo-Integration, individuell gebrandete Materialien, Shirts, Caps und Merchandise nach Unternehmensidentität." },
-              { icon: "💬", title: "Networking", desc: "Konzipierte Lounge-Bereiche, dedizierte Networking-Slots und gezielte Gesprächsformate für qualitativ hochwertigen B2B-Austausch." },
-              { icon: "🏆", title: "Siegerehrung", desc: "Hochwertige Pokale, personalisierte Awards und professionell inszenierte Abschlussmomente mit nachhaltigem Erinnerungswert." },
+              {
+                icon: "🎯",
+                title: "Konzeption",
+                desc: "Zielsetzung, Formatwahl, Dramaturgie und Ablaufdesign — maßgeschneidert auf Ihr Unternehmen und Ihre Zielgruppe.",
+              },
+              {
+                icon: "📋",
+                title: "Organisation",
+                desc: "Location, Court-Buchung, Teilnehmerhandling, Zeitplanung und Turnierlogik — strukturiert und lückenlos koordiniert.",
+              },
+              {
+                icon: "🎾",
+                title: "Teilnehmererlebnis",
+                desc: "Coaching, Warm-up, Spielmodi, Moderation, Catering und Hospitality — für ein rundum erstklassiges Erlebnis auf und neben dem Court.",
+              },
+              {
+                icon: "🎨",
+                title: "Markeninszenierung",
+                desc: "Welcome Area, Branding, Materialien, Awards und Content-Produktion — Ihr Unternehmen professionell in Szene gesetzt.",
+              },
+              {
+                icon: "🎬",
+                title: "Nachbereitung",
+                desc: "Aftermovie, Fotoauswahl, Social Recap und Highlight-Content — damit der Event nachhaltig in Erinnerung bleibt.",
+              },
+              {
+                icon: "✅",
+                title: "Ihr Input. Unser Service.",
+                desc: "Sie geben Ziel, Anlass und Teilnehmerkreis vor. Wir übernehmen die komplette Umsetzung — vollständig, professionell und termingerecht.",
+                highlight: true,
+              },
             ].map((item, i) => (
               <div
                 key={item.title}
-                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[160px] ${[0,2,5,7].includes(i) ? "bg-forest text-cream" : "bg-sand"}`}
+                className={`rounded-2xl p-6 hover:shadow-md transition-shadow min-h-[170px] ${[1,3].includes(i) ? "bg-forest text-cream" : item.highlight ? "bg-lime text-white" : "bg-sand"}`}
               >
                 <span className="text-2xl mb-3 block">{item.icon}</span>
-                <h3 className={`font-extrabold mb-2 ${[0,2,5,7].includes(i) ? "text-lime" : "text-forest"}`}>{item.title}</h3>
-                <p className={`text-sm leading-relaxed ${[0,2,5,7].includes(i) ? "text-cream/70" : "text-anthracite/60"}`}>{item.desc}</p>
+                <h3 className={`font-extrabold mb-2 ${[1,3].includes(i) ? "text-lime" : item.highlight ? "text-white" : "text-forest"}`}>{item.title}</h3>
+                <p className={`text-sm leading-relaxed ${[1,3].includes(i) ? "text-cream/70" : item.highlight ? "text-white/85" : "text-anthracite/60"}`}>{item.desc}</p>
               </div>
             ))}
           </div>
