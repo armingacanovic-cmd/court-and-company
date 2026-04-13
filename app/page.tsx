@@ -581,7 +581,7 @@ export default function Home() {
 
       {/* PDF Onepager Floating Button */}
       <div className="fixed bottom-24 right-6 z-50 group flex items-center justify-end">
-        <span className="mr-3 bg-forest text-cream text-xs font-semibold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <span className="mr-3 bg-forest text-cream text-xs font-semibold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-150 ease-out pointer-events-none">
           One-Pager herunterladen
         </span>
         <a
@@ -601,7 +601,7 @@ export default function Home() {
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-6 right-6 z-50 group flex items-center justify-end">
-        <span className="mr-3 bg-anthracite text-cream text-xs font-semibold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <span className="mr-3 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-150 ease-out pointer-events-none" style={{ backgroundColor: "#25D366" }}>
           Direkt anfragen — Antwort in 24h
         </span>
         <a
