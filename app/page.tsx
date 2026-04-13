@@ -581,9 +581,8 @@ export default function Home() {
 
       {/* PDF Onepager Floating Button */}
       <a
-        href="/onepager"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/api/onepager"
+        download="court-and-company-onepager.pdf"
         className="fixed bottom-24 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all bg-forest"
         aria-label="Onepager als PDF herunterladen"
         title="Als PDF herunterladen"
