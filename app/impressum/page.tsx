@@ -29,7 +29,7 @@ export default function ImpressumPage() {
             <h2 className="text-lg font-bold text-anthracite mb-2">Kontakt</h2>
             <p>
               Telefon: +49 176 51998637<br />
-              E-Mail: armin.gacanovic@web.de
+              E-Mail: team@court-and-company.com
             </p>
           </section>
 

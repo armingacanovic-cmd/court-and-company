@@ -101,40 +101,43 @@ export default function Home() {
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Zielgruppen
           </span>
-          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Für wen ist das?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Für welche Anlässe?</h2>
+          <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
+            Corporate Padel Events eignen sich für eine Vielzahl unternehmerischer Ziele — von interner Teamkultur bis strategischer Außenwirkung.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Mitarbeiter",
-                desc: "Ein exklusives Eventformat, das Teamgeist stärkt, Motivation fördert und Mitarbeitenden echte Wertschätzung in einem besonderen Rahmen vermittelt.",
+                title: "Teambuilding & Mitarbeiterbindung",
+                desc: "Für Unternehmen, die Mitarbeitende aktivieren, bereichsübergreifenden Austausch fördern und Wertschätzung erlebbar machen möchten.",
                 icon: "🏢",
                 accent: "bg-lime",
               },
               {
-                title: "Kunden",
-                desc: "Ein hochwertiger Anlass, um Beziehungen zu vertiefen, persönliche Begegnungen zu schaffen und Markenbindung auf emotionale Weise erlebbar zu machen.",
+                title: "Kundenevents & Kundenbindung",
+                desc: "Für Unternehmen, die Bestandskunden in einem exklusiven und persönlichen Rahmen enger an ihre Marke binden möchten.",
                 icon: "🌟",
                 accent: "bg-forest",
               },
               {
-                title: "Partner",
-                desc: "Eine stilvolle Plattform für Austausch, Vernetzung und gemeinsame Erlebnisse, die bestehende Business-Beziehungen stärkt und neue Verbindungen fördert.",
+                title: "Partner- & Netzwerkveranstaltungen",
+                desc: "Für Unternehmen, die Geschäftspartner, Multiplikatoren oder B2B-Kontakte in einem modernen Format zusammenbringen möchten.",
                 icon: "🤝",
                 accent: "bg-beige",
               },
               {
-                title: "Sportvereine",
-                desc: "Ob Vereinsausflug, Saisonabschluss oder Mitglieder-Event — Padel ist der perfekte Sport für Vereine, die ihren Zusammenhalt auf dem Court feiern wollen.",
+                title: "Employer Branding & Recruiting",
+                desc: "Für Unternehmen, die sich als attraktiver Arbeitgeber positionieren und Young Professionals durch ein zeitgemäßes Format ansprechen möchten.",
                 icon: "🏅",
                 accent: "bg-lime",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className={`w-12 h-12 ${item.accent} rounded-xl flex items-center justify-center text-2xl mb-5`}>
+              <div key={item.title} className="bg-forest text-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className={`w-12 h-12 ${item.accent} rounded-xl flex items-center justify-center text-2xl mb-5 flex-shrink-0`}>
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-extrabold mb-3 text-forest">{item.title}</h3>
-                <p className="text-anthracite/65 leading-relaxed text-sm">{item.desc}</p>
+                <h3 className="text-base font-extrabold mb-3 text-lime uppercase tracking-wide leading-snug">{item.title}</h3>
+                <p className="text-cream/70 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -147,21 +150,20 @@ export default function Home() {
           <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Full-Service
           </span>
-          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Was wir übernehmen</h2>
+          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unser Leistungsumfang</h2>
           <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
-            Von der ersten Planung bis zum letzten Programmpunkt übernehmen wir alles.
-            Ihr erscheint — wir haben alles vorbereitet.
+            Sie definieren Ziel, Anlass und Teilnehmerkreis — wir übernehmen die vollständige Konzeption und Umsetzung. Von der Locationauswahl bis zum letzten Programmpunkt.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: "📍", title: "Location", desc: "Hochwertige Padel-Locations, Court-Koordination und professionelles Set-up." },
-              { icon: "📋", title: "Organisation", desc: "Ablaufplanung, Turnierformate, Moderation und Ergebniserfassung." },
-              { icon: "🎾", title: "Coaching", desc: "Trainer vor Ort, Warm-up und Einführung für alle Spielniveaus." },
-              { icon: "🍽️", title: "Catering", desc: "Hochwertiges Catering, Getränke, Snacks und kulinarischer Abschluss." },
-              { icon: "🎵", title: "Entertainment", desc: "DJ, Live-Musik, Moderation und atmosphärische Eventgestaltung." },
-              { icon: "🎨", title: "Branding", desc: "Logo-Flächen, Shirts, Caps, Bälle und individuelle Inszenierung." },
-              { icon: "💬", title: "Networking", desc: "Lounge-Bereiche, Networking-Slots und gezielter Austausch." },
-              { icon: "🏆", title: "Siegerehrung", desc: "Pokale, emotionale Abschlussmomente und gebrandete Awards." },
+              { icon: "📍", title: "Location", desc: "Selektion und Buchung exklusiver Padel-Anlagen, Court-Koordination sowie vollständiges Set-up inklusive Beschilderung und Ausstattung." },
+              { icon: "📋", title: "Organisation", desc: "Strukturiertes Ablauf- und Zeitmanagement, maßgeschneiderte Turnierformate, professionelle Moderation und lückenlose Ergebniserfassung." },
+              { icon: "🎾", title: "Coaching", desc: "Qualifizierte Trainer vor Ort, strukturiertes Warm-up-Programm und niveaugerechte Einführung für alle Spielstärken." },
+              { icon: "🍽️", title: "Catering", desc: "Hochwertige Verpflegungskonzepte, Getränkebegleitung, Snack-Stationen und kulinarischer Eventabschluss nach Maß." },
+              { icon: "🎵", title: "Entertainment", desc: "Professionelle DJ-Betreuung, atmosphärische Beschallung und stimmungsvolle Bühnengestaltung für den gesamten Eventverlauf." },
+              { icon: "🎨", title: "Branding", desc: "Corporate-konforme Logo-Integration, individuell gebrandete Materialien, Shirts, Caps und Merchandise nach Unternehmensidentität." },
+              { icon: "💬", title: "Networking", desc: "Konzipierte Lounge-Bereiche, dedizierte Networking-Slots und gezielte Gesprächsformate für qualitativ hochwertigen B2B-Austausch." },
+              { icon: "🏆", title: "Siegerehrung", desc: "Hochwertige Pokale, personalisierte Awards und professionell inszenierte Abschlussmomente mit nachhaltigem Erinnerungswert." },
             ].map((item, i) => (
               <div
                 key={item.title}

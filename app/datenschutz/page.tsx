@@ -23,7 +23,7 @@ export default function DatenschutzPage() {
               Armin Gacanovic<br />
               Kollatzstraße 5<br />
               14059 Berlin<br />
-              E-Mail: armin.gacanovic@web.de
+              E-Mail: team@court-and-company.com
             </p>
           </section>
 
@@ -91,7 +91,7 @@ export default function DatenschutzPage() {
               <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
             </ul>
             <p className="mt-3">
-              Zur Ausübung deiner Rechte wende dich an: <strong>armin.gacanovic@web.de</strong>
+              Zur Ausübung deiner Rechte wende dich an: <strong>team@court-and-company.com</strong>
             </p>
           </section>
 
