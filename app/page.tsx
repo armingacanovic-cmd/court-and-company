@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <Link
           href="/buchen"
-          className="bg-forest text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:bg-lime transition-colors"
+          className="hidden sm:block bg-forest text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:bg-lime transition-colors"
         >
           Jetzt anfragen
         </Link>
