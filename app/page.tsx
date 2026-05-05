@@ -7,20 +7,24 @@ export default function Home() {
     <main className="min-h-screen bg-cream text-anthracite">
 
       {/* Navigation */}
-      <nav id="top" className="flex items-center justify-between px-8 py-5 bg-cream border-b border-beige/30 sticky top-0 z-50">
-        <div className="flex items-center gap-3">
+      <nav id="top" className="grid grid-cols-3 items-center px-4 sm:px-8 py-5 bg-cream border-b border-beige/30 sticky top-0 z-50">
+        <div className="flex items-center">
           <NavMenu />
+        </div>
+        <div className="flex justify-center">
           <a href="#top">
-            <span className="text-2xl font-extrabold tracking-tight text-forest">Court</span>
-            <span className="text-2xl font-light tracking-tight text-anthracite"> & Company</span>
+            <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-forest">Court</span>
+            <span className="text-xl sm:text-2xl font-light tracking-tight text-anthracite"> & Company</span>
           </a>
         </div>
-        <Link
-          href="/buchen"
-          className="hidden sm:block bg-forest text-cream px-6 py-2.5 rounded-full text-sm font-bold hover:bg-lime transition-colors"
-        >
-          Jetzt anfragen
-        </Link>
+        <div className="flex justify-end">
+          <Link
+            href="/buchen"
+            className="bg-forest text-cream px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold hover:bg-lime transition-colors"
+          >
+            Anfragen
+          </Link>
+        </div>
       </nav>
 
       {/* Hero */}
@@ -101,10 +105,7 @@ export default function Home() {
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Zielgruppen
           </span>
-          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Für welche Anlässe?</h2>
-          <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
-            Corporate Padel Events eignen sich für eine Vielzahl unternehmerischer Ziele — von interner Teamkultur bis strategischer Außenwirkung.
-          </p>
+          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Für welche Anlässe?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -146,10 +147,7 @@ export default function Home() {
           <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Full-Service
           </span>
-          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unser Leistungsumfang</h2>
-          <p className="text-anthracite/55 max-w-xl mb-14 text-sm leading-relaxed">
-            Sie definieren Ziel, Anlass und Teilnehmerkreis — wir übernehmen die vollständige Konzeption und Umsetzung. Von der ersten Idee bis zum letzten Programmpunkt.
-          </p>
+          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Unser Leistungsumfang</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               {
@@ -197,88 +195,92 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Über uns */}
-      <section id="ueber" className="px-6 py-20 bg-cream">
+      {/* Über uns Teaser */}
+      <section id="ueber" className="px-6 py-16 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-              Über uns
-            </span>
-            <h2 className="text-4xl font-extrabold text-anthracite leading-tight mb-4">
-              Sport ist unsere<br />
-              <span className="text-forest">Leidenschaft & Expertise.</span>
-            </h2>
-            <p className="text-anthracite/60 text-sm max-w-2xl mx-auto leading-relaxed">
-              Court & Company wurde von zwei passionierten Sportlern gegründet — mit akademischem Hintergrund, praktischer Erfahrung und echtem Verständnis für das, was Events besonders macht.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            {/* Armin */}
-            <div className="bg-sand rounded-2xl p-8 flex flex-col gap-5">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-forest flex items-center justify-center text-cream font-extrabold text-xl flex-shrink-0">
-                  AG
-                </div>
-                <div>
-                  <h3 className="font-extrabold text-anthracite text-lg">Armin Gacanovic</h3>
-                  <p className="text-xs text-forest font-semibold">Gründer & Trainer</p>
-                </div>
-              </div>
-              <p className="text-anthracite/65 text-sm leading-relaxed">
-                Armin ist ausgebildeter Sportlehrer (B.A. Sportlehramt, Universität Potsdam) und seit über 2 Jahren als aktiver Trainer tätig. Mit langjähriger Erfahrung in der Arbeit mit Sportstudios bringt er ein tiefes Verständnis für Bewegung, Motivation und Gruppenführung mit — auf dem Court und dahinter.
-              </p>
-              <div className="flex flex-col gap-2">
-                {[
-                  "🎓 B.A. Sportlehramt, Universität Potsdam",
-                  "🏋️ Langjährige Erfahrung in Sportstudios",
-                  "🎾 Trainer & Coach seit über 2 Jahren",
-                ].map((item) => (
-                  <p key={item} className="text-xs text-anthracite/60">{item}</p>
-                ))}
-              </div>
+          <div className="bg-forest text-cream rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Über uns</span>
+              <h2 className="text-2xl font-extrabold mb-2">Wer steckt hinter Court & Company?</h2>
+              <p className="text-cream/65 text-sm max-w-md">Zwei Gründer, akademischer Hintergrund und echte Padel-Begeisterung — lern uns kennen.</p>
             </div>
-
-            {/* Niklas */}
-            <div className="bg-sand rounded-2xl p-8 flex flex-col gap-5">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-lime flex items-center justify-center text-white font-extrabold text-xl flex-shrink-0">
-                  NL
-                </div>
-                <div>
-                  <h3 className="font-extrabold text-anthracite text-lg">Niklas Linhardt</h3>
-                  <p className="text-xs text-forest font-semibold">Gründer & Eventmanagement</p>
-                </div>
-              </div>
-              <p className="text-anthracite/65 text-sm leading-relaxed">
-                Niklas bringt den strategischen Blick für Organisation und Eventplanung mit. Als Absolvent des Sportmanagement-Studiums (B.A., Universität Potsdam) verbindet er sportliche Leidenschaft mit betriebswirtschaftlichem Know-how — und sorgt dafür, dass jedes Event reibungslos läuft.
-              </p>
-              <div className="flex flex-col gap-2">
-                {[
-                  "🎓 B.A. Sportmanagement, Universität Potsdam",
-                  "📋 Spezialist für Eventorganisation & Planung",
-                  "🤝 Experte für B2B-Eventformate",
-                ].map((item) => (
-                  <p key={item} className="text-xs text-anthracite/60">{item}</p>
-                ))}
-              </div>
-            </div>
-
+            <Link
+              href="/ueber-uns"
+              className="flex-shrink-0 bg-lime text-white px-7 py-3 rounded-full text-sm font-bold hover:bg-white hover:text-forest transition-colors"
+            >
+              Mehr erfahren →
+            </Link>
           </div>
+        </div>
+      </section>
 
-          {/* Gemeinsamer Claim */}
-          <div className="mt-8 bg-forest text-cream rounded-2xl p-8 text-center">
-            <p className="text-lg font-bold mb-2">Zwei Absolventen. Eine Mission.</p>
-            <p className="text-cream/65 text-sm max-w-xl mx-auto">
-              Wir vereinen Trainerkompetenz, Sportmanagement und echte Padel-Begeisterung — für Events, die man nicht so schnell vergisst.
-            </p>
+      {/* Pakete Teaser */}
+      <section id="pakete" className="px-6 pb-16 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-sand rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Pakete</span>
+              <h2 className="text-2xl font-extrabold text-anthracite mb-2">Court · Business · Premium</h2>
+              <p className="text-anthracite/55 text-sm max-w-md">Alle Pakete individuell kalkuliert — ab 4 Personen, keine versteckten Kosten.</p>
+            </div>
+            <Link
+              href="/pakete"
+              className="flex-shrink-0 bg-forest text-cream px-7 py-3 rounded-full text-sm font-bold hover:bg-lime transition-colors"
+            >
+              Pakete ansehen →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="px-6 py-20 bg-sand">
+        <div className="max-w-3xl mx-auto">
+          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+            FAQ
+          </span>
+          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Häufige Fragen</h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: "Brauchen die Teilnehmer Padel-Erfahrung?",
+                a: "Nein — überhaupt nicht. Padel ist in wenigen Minuten erlernbar. Unser Coaching-Team holt alle ab, egal ob Anfänger oder Fortgeschrittene. Das Spiel lebt von Spaß und Dynamik, nicht von Können.",
+              },
+              {
+                q: "Wie viele Personen können teilnehmen?",
+                a: "Wir organisieren Events für 4 bis 60 Personen. Pro Court spielen jeweils 4 Personen. Für größere Gruppen buchen wir mehrere Courts gleichzeitig, damit alle aktiv dabei sind. Bei besonderem Bedarf können wir auch ganze Padel-Locations exklusiv anmieten — für ein rundum privates Event-Erlebnis.",
+              },
+              {
+                q: "Wo finden die Events statt?",
+                a: "Wir arbeiten mit professionellen Padel-Anlagen in ganz Deutschland zusammen. Auf Wunsch suchen wir eine Location in eurer Nähe oder in einer Stadt eurer Wahl.",
+              },
+              {
+                q: "Was ist im Preis inbegriffen?",
+                a: "Je nach Paket ist Location, Organisation, Coaching, Catering, DJ und Siegerehrung enthalten. Alle Leistungen sind transparent im Angebot aufgeführt — keine versteckten Kosten.",
+              },
+              {
+                q: "Wie läuft die Buchung ab?",
+                a: "Anfrage stellen → innerhalb von 24h individuelle Rückmeldung → Angebot → Bestätigung. Wir kümmern uns um alles weitere. Ihr erscheint am Eventtag — wir haben alles vorbereitet.",
+              },
+              {
+                q: "Geht das auch für Sportvereine?",
+                a: "Ja, absolut. Vereinsausflüge, Saisonabschluss-Events oder Mitglieder-Turniere — wir organisieren genauso für Vereine wie für Unternehmen. Einfach anfragen und wir finden das passende Format.",
+              },
+            ].map((item, i) => (
+              <details key={i} className="bg-cream rounded-2xl px-6 py-5 group cursor-pointer">
+                <summary className="flex justify-between items-center font-bold text-anthracite text-sm list-none">
+                  {item.q}
+                  <span className="text-forest text-xl font-light ml-4 flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="mt-4 text-anthracite/65 text-sm leading-relaxed">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Bewertungen */}
-      <section id="bewertungen" className="px-6 py-20 bg-sand">
+      <section id="bewertungen" className="px-6 py-20 bg-cream">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Kundenstimmen
@@ -372,180 +374,6 @@ export default function Home() {
               <p className="text-5xl font-extrabold text-lime">100%</p>
               <p className="text-cream/60 text-xs mt-1">Würden uns empfehlen</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Event Flow */}
-      <section className="px-6 py-20 bg-anthracite text-cream">
-        <div className="max-w-5xl mx-auto">
-          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-            Tagesablauf
-          </span>
-          <h2 className="text-4xl font-extrabold mb-14">Ein typischer Event-Tag</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { time: "15:00", title: "Welcome & Arrival", desc: "Welcome Drinks, gebrandete Welcome Area und erste Musik schaffen eine exklusive Atmosphäre." },
-              { time: "15:30", title: "Opening", desc: "Begrüßung, Einführung in das Eventkonzept und den Tagesablauf." },
-              { time: "15:45", title: "Warm-up & Coaching", desc: "Gemeinsames Warm-up mit Trainern, Einweisung in Spielablauf und Turniermodus." },
-              { time: "16:15", title: "Match Phase I", desc: "Erste Spielrunde — übrige Gäste genießen Lounge, Musik und Catering." },
-              { time: "17:30", title: "Social Break", desc: "Gezielte Pause mit Fokus auf Austausch, Verpflegung und Networking." },
-              { time: "18:00", title: "Match Phase II", desc: "Finalspiele und sportlicher Höhepunkt des Events." },
-              { time: "19:00", title: "Siegerehrung", desc: "Übergabe von Pokalen, Awards und gebrandeten Preisen." },
-              { time: "19:30", title: "Get Together", desc: "DJ, Drinks, Catering und Lounge-Atmosphäre für den stilvollen Ausklang." },
-            ].map((item) => (
-              <div key={item.time} className="rounded-2xl p-5 border border-white/10 hover:border-lime/60 hover:bg-white/5 transition-all">
-                <p className="text-lime font-extrabold text-sm mb-1">{item.time}</p>
-                <h3 className="font-bold text-cream mb-2">{item.title}</h3>
-                <p className="text-cream/45 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pakete */}
-      <section id="pakete" className="px-6 py-20 bg-cream">
-        <div className="max-w-5xl mx-auto">
-          <span className="inline-block bg-forest text-cream text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-            Pakete
-          </span>
-          <h2 className="text-4xl font-extrabold mb-4 text-anthracite">Unsere Pakete</h2>
-          <p className="text-anthracite/55 max-w-2xl mb-14 text-sm leading-relaxed">
-            Jedes Event wird individuell nach Teilnehmerzahl, Dauer, Location und gewünschten Extras kalkuliert. Alle Pakete sind ab 4 Personen buchbar — wir erstellen euch gerne ein maßgeschneidertes Angebot.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Court",
-                subtitle: "Kompakter Einstieg für hochwertige Team-Events",
-                price: "",
-                highlight: false,
-                features: [
-                  "Court-Buchung & Location",
-                  "Turnierorganisation",
-                  "Coaching & Warm-up",
-                  "Equipment & Ausstattung",
-                  "Moderation",
-                  "Persönliche Betreuung",
-                ],
-              },
-              {
-                name: "Business",
-                subtitle: "Unser Bestseller für stilvolle Firmen-Events",
-                price: "",
-                highlight: true,
-                features: [
-                  "Alles aus Court",
-                  "Catering & Getränke",
-                  "DJ & Musik",
-                  "Branding & Merchandise",
-                  "Networking-Bereich",
-                ],
-              },
-              {
-                name: "Premium",
-                subtitle: "Individuell inszeniertes Signature-Event",
-                price: "",
-                highlight: false,
-                features: [
-                  "Alles aus Business",
-                  "Individuelle Inszenierung",
-                  "Siegerehrung & Awards",
-                  "Professionelle Fotografie",
-                  "Komplette Eventleitung",
-                ],
-              },
-            ].map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`rounded-2xl p-8 flex flex-col ${pkg.highlight ? "bg-forest text-cream shadow-xl scale-105" : "bg-sand"}`}
-              >
-                <div className="mb-6">
-                  {pkg.highlight && (
-                    <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-                      Bestseller
-                    </span>
-                  )}
-                  <h3 className={`text-2xl font-extrabold ${pkg.highlight ? "text-white" : "text-anthracite"}`}>
-                    {pkg.name}
-                  </h3>
-                  <p className={`text-sm mt-1 leading-snug ${pkg.highlight ? "text-cream/60" : "text-anthracite/50"}`}>
-                    {pkg.subtitle}
-                  </p>
-                </div>
-                {pkg.price && (
-                  <div className={`text-3xl font-extrabold mb-6 ${pkg.highlight ? "text-lime" : "text-forest"}`}>
-                    {pkg.price}
-                  </div>
-                )}
-                <ul className="space-y-2.5 flex-1">
-                  {pkg.features.map((f) => (
-                    <li key={f} className={`flex items-start gap-2.5 text-sm ${pkg.highlight ? "text-cream/80" : "text-anthracite/70"}`}>
-                      <span className="mt-0.5 font-bold text-lime">✓</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/buchen"
-                  className={`mt-8 text-center py-3 rounded-full text-sm font-bold transition-colors ${pkg.highlight ? "bg-lime text-white hover:bg-white hover:text-forest" : "bg-forest text-cream hover:bg-lime"}`}
-                >
-                  Jetzt anfragen →
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Hinweis */}
-          <p className="mt-10 text-center text-anthracite/45 text-xs leading-relaxed max-w-2xl mx-auto">
-            Zusätzliche Leistungen wie Branding, Foto/Video, Catering-Upgrades oder individuelle Inszenierung kalkulieren wir passend zu eurem Event.
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="px-6 py-20 bg-sand">
-        <div className="max-w-3xl mx-auto">
-          <span className="inline-block bg-lime text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-            FAQ
-          </span>
-          <h2 className="text-4xl font-extrabold mb-14 text-anthracite">Häufige Fragen</h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: "Brauchen die Teilnehmer Padel-Erfahrung?",
-                a: "Nein — überhaupt nicht. Padel ist in wenigen Minuten erlernbar. Unser Coaching-Team holt alle ab, egal ob Anfänger oder Fortgeschrittene. Das Spiel lebt von Spaß und Dynamik, nicht von Können.",
-              },
-              {
-                q: "Wie viele Personen können teilnehmen?",
-                a: "Wir organisieren Events für 4 bis 60 Personen. Pro Court spielen jeweils 4 Personen. Für größere Gruppen buchen wir mehrere Courts gleichzeitig, damit alle aktiv dabei sind. Bei besonderem Bedarf können wir auch ganze Padel-Locations exklusiv anmieten — für ein rundum privates Event-Erlebnis.",
-              },
-              {
-                q: "Wo finden die Events statt?",
-                a: "Wir arbeiten mit professionellen Padel-Anlagen in ganz Deutschland zusammen. Auf Wunsch suchen wir eine Location in eurer Nähe oder in einer Stadt eurer Wahl.",
-              },
-              {
-                q: "Was ist im Preis inbegriffen?",
-                a: "Je nach Paket ist Location, Organisation, Coaching, Catering, DJ und Siegerehrung enthalten. Alle Leistungen sind transparent im Angebot aufgeführt — keine versteckten Kosten.",
-              },
-              {
-                q: "Wie läuft die Buchung ab?",
-                a: "Anfrage stellen → innerhalb von 24h individuelle Rückmeldung → Angebot → Bestätigung. Wir kümmern uns um alles weitere. Ihr erscheint am Eventtag — wir haben alles vorbereitet.",
-              },
-              {
-                q: "Geht das auch für Sportvereine?",
-                a: "Ja, absolut. Vereinsausflüge, Saisonabschluss-Events oder Mitglieder-Turniere — wir organisieren genauso für Vereine wie für Unternehmen. Einfach anfragen und wir finden das passende Format.",
-              },
-            ].map((item, i) => (
-              <details key={i} className="bg-cream rounded-2xl px-6 py-5 group cursor-pointer">
-                <summary className="flex justify-between items-center font-bold text-anthracite text-sm list-none">
-                  {item.q}
-                  <span className="text-forest text-xl font-light ml-4 flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <p className="mt-4 text-anthracite/65 text-sm leading-relaxed">{item.a}</p>
-              </details>
-            ))}
           </div>
         </div>
       </section>
