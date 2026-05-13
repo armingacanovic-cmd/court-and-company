@@ -4,100 +4,92 @@ import {
   Text,
   View,
   StyleSheet,
-  Font,
 } from "@react-pdf/renderer";
 
 const FOREST = "#1A4731";
-const LIME = "#7EC957";
-const CREAM = "#FAF7F2";
+const GOLD = "#C9A227";
+const CREAM = "#F5F0E8";
 const SAND = "#EDE8DF";
-const ANTHRACITE = "#252525";
+const WHITE = "#FFFFFF";
+const DARK = "#1A1A1A";
 
 const s = StyleSheet.create({
-  page: { backgroundColor: CREAM, fontFamily: "Helvetica", color: ANTHRACITE },
+  page: { backgroundColor: CREAM, fontFamily: "Helvetica", flexDirection: "column" },
 
-  // Header
-  header: { backgroundColor: FOREST, padding: "20 32", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  logoText: { color: "white", fontSize: 20, fontFamily: "Helvetica-Bold" },
-  logoLight: { color: "white", fontSize: 20, fontFamily: "Helvetica" },
-  tagline: { color: "rgba(255,255,255,0.6)", fontSize: 8, letterSpacing: 2, marginTop: 3, textTransform: "uppercase" },
-  headerContact: { color: "rgba(255,255,255,0.6)", fontSize: 9, textAlign: "right" },
+  // ── HEADER ──────────────────────────────────────────────
+  header: { backgroundColor: FOREST, padding: "28 32 18 32" },
+  headerTitle: { color: GOLD, fontSize: 34, fontFamily: "Helvetica-Bold", lineHeight: 1.1 },
+  headerSub: { color: WHITE, fontSize: 19, fontFamily: "Helvetica", marginTop: 8, lineHeight: 1.3 },
 
-  // Hero strip
-  hero: { backgroundColor: "#2D6B4A", padding: "14 32", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  heroText: { color: "white", fontSize: 10, maxWidth: 340, lineHeight: 1.6 },
-  heroBold: { fontFamily: "Helvetica-Bold" },
-  stats: { flexDirection: "row", gap: 20 },
-  statVal: { color: LIME, fontSize: 16, fontFamily: "Helvetica-Bold", textAlign: "center" },
-  statLabel: { color: "rgba(255,255,255,0.5)", fontSize: 7, textTransform: "uppercase", letterSpacing: 1, textAlign: "center" },
+  // ── TAGLINE STRIP ────────────────────────────────────────
+  taglineStrip: { backgroundColor: FOREST, paddingHorizontal: 32, paddingBottom: 18 },
+  badgeWrap: { borderWidth: 1, borderColor: GOLD, borderRadius: 20, paddingHorizontal: 10, paddingVertical: 3, alignSelf: "flex-start", marginBottom: 8 },
+  badgeText: { color: GOLD, fontSize: 7, fontFamily: "Helvetica-Bold", letterSpacing: 1.8 },
+  taglineLine: { color: WHITE, fontSize: 7.5, fontFamily: "Helvetica-Bold", lineHeight: 1.7, letterSpacing: 0.3 },
 
-  // Body
-  body: { padding: "20 32", gap: 18 },
+  // ── MIDDLE ROW ───────────────────────────────────────────
+  middleRow: { flexDirection: "row", backgroundColor: SAND, flex: 0 },
 
-  // Section
-  sectionBadge: { backgroundColor: FOREST, color: "white", fontSize: 7, fontFamily: "Helvetica-Bold", letterSpacing: 1.5, textTransform: "uppercase", padding: "2 8", borderRadius: 20, alignSelf: "flex-start", marginBottom: 6 },
-  sectionBadgeLime: { backgroundColor: LIME },
-  sectionTitle: { fontSize: 13, fontFamily: "Helvetica-Bold", color: FOREST, marginBottom: 8 },
+  leftCol: { flex: 55, padding: "18 18 18 32" },
+  divider: { width: 1, backgroundColor: "#C8C2B8" },
+  rightCol: { flex: 45, padding: "18 28 18 18" },
 
-  // Cards grid 4
-  grid4: { flexDirection: "row", gap: 6 },
-  card4: { flex: 1, backgroundColor: FOREST, borderRadius: 6, padding: 10 },
-  card4Title: { fontSize: 7, fontFamily: "Helvetica-Bold", color: LIME, textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 4, lineHeight: 1.3 },
-  card4Desc: { fontSize: 7.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 },
+  colHeading: { fontSize: 15, fontFamily: "Helvetica-Bold", color: DARK, marginBottom: 14, lineHeight: 1.2 },
 
-  // Cards grid 3
-  grid3: { flexDirection: "row", gap: 6 },
-  cardLight: { flex: 1, backgroundColor: SAND, borderRadius: 6, padding: 10 },
-  cardDark: { flex: 1, backgroundColor: FOREST, borderRadius: 6, padding: 10 },
-  cardTitleLight: { fontSize: 8, fontFamily: "Helvetica-Bold", color: FOREST, marginBottom: 4 },
-  cardTitleDark: { fontSize: 8, fontFamily: "Helvetica-Bold", color: LIME, marginBottom: 4 },
-  cardDescLight: { fontSize: 7.5, color: "rgba(37,37,37,0.6)", lineHeight: 1.5 },
-  cardDescDark: { fontSize: 7.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 },
-  cardIcon: { fontSize: 12, marginBottom: 4 },
+  // bullet rows
+  bulletRow: { flexDirection: "row", gap: 8, marginBottom: 9, alignItems: "flex-start" },
+  bulletIconCircle: { width: 18, height: 18, borderRadius: 9, borderWidth: 1, borderColor: "#A8A098", backgroundColor: CREAM, marginTop: 0.5, flexShrink: 0 },
+  bulletText: { fontSize: 7.5, color: DARK, lineHeight: 1.55, flex: 1 },
 
-  // Packages
-  pkgBadge: { backgroundColor: LIME, color: "white", fontSize: 7, fontFamily: "Helvetica-Bold", letterSpacing: 1, textTransform: "uppercase", padding: "2 6", borderRadius: 12, alignSelf: "flex-start", marginBottom: 4 },
-  pkgName: { fontSize: 12, fontFamily: "Helvetica-Bold", marginBottom: 6 },
-  pkgNameLight: { color: ANTHRACITE },
-  pkgNameDark: { color: "white" },
-  featureRow: { flexDirection: "row", gap: 5, marginBottom: 3, alignItems: "flex-start" },
-  featureCheck: { color: LIME, fontSize: 7, fontFamily: "Helvetica-Bold", marginTop: 1 },
-  featureText: { fontSize: 7.5, lineHeight: 1.4 },
-  featureTextLight: { color: "rgba(37,37,37,0.7)" },
-  featureTextDark: { color: "rgba(255,255,255,0.8)" },
+  // referenzen stats
+  statRow: { flexDirection: "row", gap: 9, marginBottom: 9, alignItems: "center" },
+  statIconBox: { width: 22, height: 22, borderWidth: 1, borderColor: DARK, borderRadius: 4, alignItems: "center", justifyContent: "center", flexShrink: 0 },
+  statIconText: { fontSize: 10 },
+  statText: { fontSize: 8.5, color: DARK, fontFamily: "Helvetica-Bold" },
 
-  // Footer
-  footer: { backgroundColor: FOREST, padding: "12 32", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  footerLogo: { color: "white", fontSize: 11, fontFamily: "Helvetica-Bold" },
-  footerContactWrap: { flexDirection: "row", gap: 20 },
-  footerLabel: { fontSize: 7, color: "rgba(255,255,255,0.5)", textTransform: "uppercase", letterSpacing: 1, marginBottom: 2 },
-  footerVal: { fontSize: 8, color: "white", fontFamily: "Helvetica-Bold" },
+  // player silhouettes placeholder
+  playersRow: { flexDirection: "row", gap: 8, marginTop: 10, justifyContent: "center" },
+  playerBox: { width: 44, height: 60, backgroundColor: DARK, borderRadius: 4, opacity: 0.15 },
 
-  noteText: { fontSize: 7, color: "rgba(37,37,37,0.4)", textAlign: "center", marginTop: 4 },
+  // ── BOTTOM ROW ───────────────────────────────────────────
+  bottomRow: { flexDirection: "row", backgroundColor: FOREST, flex: 0 },
+  bottomLeft: { flex: 55, padding: "18 18 18 32" },
+  bottomDivider: { width: 1, backgroundColor: "rgba(255,255,255,0.12)" },
+  bottomRight: { flex: 45, padding: "18 28 18 18" },
+
+  bottomHeading: { fontSize: 15, fontFamily: "Helvetica-Bold", color: WHITE, marginBottom: 5 },
+  bottomDesc: { fontSize: 7.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.55, marginBottom: 12 },
+
+  leistungenGrid: { flexDirection: "row", flexWrap: "wrap", gap: 0 },
+  leistungItem: { width: "50%", flexDirection: "row", gap: 6, alignItems: "center", marginBottom: 9 },
+  leistungDotOuter: { width: 18, height: 18, borderRadius: 9, backgroundColor: "rgba(255,255,255,0.12)", alignItems: "center", justifyContent: "center", flexShrink: 0 },
+  leistungDotInner: { width: 6, height: 6, borderRadius: 3, backgroundColor: GOLD },
+  leistungLabel: { fontSize: 7.5, color: WHITE, fontFamily: "Helvetica-Bold" },
+
+  kontaktHeading: { fontSize: 15, fontFamily: "Helvetica-Bold", color: WHITE, marginBottom: 14 },
+  kontaktRow: { flexDirection: "row", gap: 10, marginBottom: 11, alignItems: "center" },
+  kontaktIconBox: { width: 20, height: 20, borderRadius: 10, borderWidth: 1, borderColor: "rgba(255,255,255,0.35)", alignItems: "center", justifyContent: "center", flexShrink: 0 },
+  kontaktIconChar: { fontSize: 8, color: WHITE },
+  kontaktText: { fontSize: 8, color: WHITE, lineHeight: 1.4 },
+
+  // ── FOOTER ───────────────────────────────────────────────
+  footer: { backgroundColor: GOLD, padding: "11 32", alignItems: "center", justifyContent: "center" },
+  footerText: { color: FOREST, fontSize: 8.5, fontFamily: "Helvetica-Bold", letterSpacing: 2.5 },
 });
 
 const leistungen = [
-  { icon: "●", title: "Konzeption", desc: "Zielsetzung, Formatwahl, Dramaturgie und Ablaufdesign." },
-  { icon: "●", title: "Organisation", desc: "Location, Court-Buchung, Teilnehmerhandling und Turnierlogik." },
-  { icon: "●", title: "Teilnehmererlebnis", desc: "Coaching, Warm-up, Spielmodi, Moderation und Catering." },
-  { icon: "●", title: "Markeninszenierung", desc: "Branding, Welcome Area, Materialien und Awards." },
-  { icon: "●", title: "Nachbereitung", desc: "Aftermovie, Fotoauswahl, Social Recap und Highlight-Content." },
-  { icon: "●", title: "Ihr Input. Unser Service.", desc: "Sie geben Ziel und Anlass vor — wir übernehmen alles." },
+  "Konzeption",
+  "Organisation",
+  "Teilnehmererlebnis",
+  "Markeninszenierung",
+  "Nachbereitung",
 ];
 
-const pakete = [
-  {
-    name: "Court", dark: false,
-    features: ["Court-Buchung & Location", "Turnierorganisation", "Coaching & Warm-up", "Equipment & Ausstattung", "Moderation & Betreuung"],
-  },
-  {
-    name: "Business", dark: true, bestseller: true,
-    features: ["Alles aus Court", "Catering & Getränke", "DJ & Musik", "Branding & Merchandise", "Networking-Bereich"],
-  },
-  {
-    name: "Premium", dark: false,
-    features: ["Alles aus Business", "Individuelle Inszenierung", "Siegerehrung & Awards", "Professionelle Fotografie", "Komplette Eventleitung"],
-  },
+const bullets = [
+  "Full-Service von A bis Z –\nIhr genießt, wir organisieren.",
+  "Keine Court-Erfahrung nötig –\nUnser Coaching holt alle ab.",
+  "Teambuilding, das wirklich verbindet –\nFür Mitarbeitende, Kunden und Partner.",
+  "Professionelle Inszenierung –\nVon der Konzeption bis zum Aftermovie.",
 ];
 
 export function OnepagerDocument() {
@@ -105,107 +97,108 @@ export function OnepagerDocument() {
     <Document title="Court & Company — Corporate Padel Events" author="Court & Company">
       <Page size="A4" style={s.page}>
 
-        {/* Header */}
+        {/* ── HEADER ── */}
         <View style={s.header}>
-          <View>
-            <Text style={s.logoText}>Court <Text style={s.logoLight}>&amp; Company</Text></Text>
-            <Text style={s.tagline}>Corporate Padel Events · Deutschland</Text>
-          </View>
-          <View>
-            <Text style={s.headerContact}>team@court-and-company.com</Text>
-            <Text style={s.headerContact}>court-and-company.com</Text>
-          </View>
+          <Text style={s.headerTitle}>Court &amp;{"\n"}Company</Text>
+          <Text style={s.headerSub}>Padel trifft{"\n"}Business.</Text>
         </View>
 
-        {/* Hero */}
-        <View style={s.hero}>
-          <Text style={s.heroText}>
-            Wir gestalten <Text style={s.heroBold}>hochwertige Padel-Eventformate</Text> für Unternehmen — sportlich, stilvoll und vollständig organisiert. Von der Konzeption bis zur Nachbereitung.
+        {/* ── TAGLINE STRIP ── */}
+        <View style={s.taglineStrip}>
+          <View style={s.badgeWrap}>
+            <Text style={s.badgeText}>CORPORATE PADEL EVENTS</Text>
+          </View>
+          <Text style={s.taglineLine}>
+            WAS WÄRE, WENN EUER NÄCHSTES EVENT WIRKLICH ETWAS BEWEGT?{"\n"}
+            WIR ORGANISIEREN CORPORATE PADEL EVENTS, DIE IN ERINNERUNG BLEIBEN –{"\n"}
+            UNVERGESSLICH, SPORTLICH, MODERN.
           </Text>
-          <View style={s.stats}>
-            {[["30+", "Events"], ["500+", "Teilnehmer"], ["4.8★", "Bewertung"]].map(([val, label]) => (
-              <View key={label}>
-                <Text style={s.statVal}>{val}</Text>
-                <Text style={s.statLabel}>{label}</Text>
+        </View>
+
+        {/* ── MIDDLE ROW ── */}
+        <View style={s.middleRow}>
+          {/* Left — Warum Court & Company */}
+          <View style={s.leftCol}>
+            <Text style={s.colHeading}>WARUM{"\n"}COURT &amp;{"\n"}COMPANY</Text>
+            {bullets.map((b) => (
+              <View key={b} style={s.bulletRow}>
+                <View style={s.bulletIconCircle} />
+                <Text style={s.bulletText}>{b}</Text>
               </View>
             ))}
           </View>
-        </View>
 
-        {/* Body */}
-        <View style={s.body}>
+          <View style={s.divider} />
 
-          {/* Für welche Anlässe */}
-          <View>
-            <Text style={s.sectionBadge}>Zielgruppen</Text>
-            <Text style={s.sectionTitle}>Für welche Anlässe?</Text>
-            <View style={s.grid4}>
-              {[
-                { title: "Teambuilding & Mitarbeiterbindung", desc: "Bereichsübergreifende Aktivierung und gelebte Wertschätzung." },
-                { title: "Kundenevents & Kundenbindung", desc: "Bestandskunden exklusiv und persönlich an die Marke binden." },
-                { title: "Partner- & Netzwerkveranstaltungen", desc: "B2B-Kontakte in modernem Format zusammenbringen." },
-                { title: "Employer Branding & Recruiting", desc: "Als Arbeitgeber positionieren und Young Professionals ansprechen." },
-              ].map((item) => (
-                <View key={item.title} style={s.card4}>
-                  <Text style={s.card4Title}>{item.title}</Text>
-                  <Text style={s.card4Desc}>{item.desc}</Text>
-                </View>
-              ))}
-            </View>
-          </View>
+          {/* Right — Referenzen */}
+          <View style={s.rightCol}>
+            <Text style={s.colHeading}>REFERENZEN</Text>
 
-          {/* Leistungsumfang */}
-          <View>
-            <Text style={[s.sectionBadge, s.sectionBadgeLime]}>Full-Service</Text>
-            <Text style={s.sectionTitle}>Unser Leistungsumfang</Text>
-            <View style={s.grid3}>
-              {leistungen.map((item, i) => (
-                <View key={item.title} style={[1, 3, 5].includes(i) ? s.cardDark : s.cardLight}>
-                  <Text style={[1, 3, 5].includes(i) ? s.cardTitleDark : s.cardTitleLight}>{item.title}</Text>
-                  <Text style={[1, 3, 5].includes(i) ? s.cardDescDark : s.cardDescLight}>{item.desc}</Text>
-                </View>
-              ))}
-            </View>
-          </View>
-
-          {/* Pakete */}
-          <View>
-            <Text style={s.sectionBadge}>Pakete</Text>
-            <Text style={s.sectionTitle}>Unsere Pakete</Text>
-            <View style={s.grid3}>
-              {pakete.map((pkg) => (
-                <View key={pkg.name} style={pkg.dark ? s.cardDark : s.cardLight}>
-                  {pkg.bestseller && <Text style={s.pkgBadge}>Bestseller</Text>}
-                  <Text style={[s.pkgName, pkg.dark ? s.pkgNameDark : s.pkgNameLight]}>{pkg.name}</Text>
-                  {pkg.features.map((f) => (
-                    <View key={f} style={s.featureRow}>
-                      <Text style={s.featureCheck}>✓</Text>
-                      <Text style={[s.featureText, pkg.dark ? s.featureTextDark : s.featureTextLight]}>{f}</Text>
-                    </View>
-                  ))}
-                </View>
-              ))}
-            </View>
-            <Text style={s.noteText}>Alle Pakete individuell kalkuliert · Ab 4 Personen · Unverbindliche Anfrage in 2 Minuten</Text>
-          </View>
-
-        </View>
-
-        {/* Footer */}
-        <View style={s.footer} fixed>
-          <Text style={s.footerLogo}>Court &amp; Company</Text>
-          <View style={s.footerContactWrap}>
             {[
-              { label: "E-Mail", value: "team@court-and-company.com" },
-              { label: "WhatsApp", value: "+49 176 519 98637" },
-              { label: "Web", value: "court-and-company.com" },
+              { icon: "★", text: "30+ erfolgreiche Events" },
+              { icon: "♟", text: "500+ Teilnehmer" },
+              { icon: "◎", text: "4.8 Sterne Bewertung" },
             ].map((item) => (
-              <View key={item.label}>
-                <Text style={s.footerLabel}>{item.label}</Text>
-                <Text style={s.footerVal}>{item.value}</Text>
+              <View key={item.text} style={s.statRow}>
+                <View style={s.statIconBox}>
+                  <Text style={s.statIconText}>{item.icon}</Text>
+                </View>
+                <Text style={s.statText}>{item.text}</Text>
+              </View>
+            ))}
+
+            <View style={s.playersRow}>
+              <View style={s.playerBox} />
+              <View style={s.playerBox} />
+            </View>
+          </View>
+        </View>
+
+        {/* ── BOTTOM ROW ── */}
+        <View style={s.bottomRow}>
+          {/* Left — Leistungen */}
+          <View style={s.bottomLeft}>
+            <Text style={s.bottomHeading}>LEISTUNGEN</Text>
+            <Text style={s.bottomDesc}>
+              Von der Konzeption bis zum Aftermovie. Wir übernehmen alles –{"\n"}
+              vollständig, professionell, termingerecht.
+            </Text>
+            <View style={s.leistungenGrid}>
+              {leistungen.map((l) => (
+                <View key={l} style={s.leistungItem}>
+                  <View style={s.leistungDotOuter}>
+                    <View style={s.leistungDotInner} />
+                  </View>
+                  <Text style={s.leistungLabel}>{l}</Text>
+                </View>
+              ))}
+            </View>
+          </View>
+
+          <View style={s.bottomDivider} />
+
+          {/* Right — Kontakt */}
+          <View style={s.bottomRight}>
+            <Text style={s.kontaktHeading}>Kontakt</Text>
+
+            {[
+              { icon: "⊕", text: "www.court-and-company.com" },
+              { icon: "✉", text: "info@court-and-company.com" },
+              { icon: "◎", text: "+49 176 519 986 37" },
+            ].map((item) => (
+              <View key={item.text} style={s.kontaktRow}>
+                <View style={s.kontaktIconBox}>
+                  <Text style={s.kontaktIconChar}>{item.icon}</Text>
+                </View>
+                <Text style={s.kontaktText}>{item.text}</Text>
               </View>
             ))}
           </View>
+        </View>
+
+        {/* ── FOOTER ── */}
+        <View style={s.footer}>
+          <Text style={s.footerText}>EUER NÄCHSTES EVENT WARTET. WIR AUCH!</Text>
         </View>
 
       </Page>
