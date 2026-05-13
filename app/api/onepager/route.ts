@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { renderToBuffer } from "@react-pdf/renderer";
-import { createElement } from "react";
-import { OnepagerDocument } from "@/app/onepager/document";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export async function GET() {
-  const buffer = await renderToBuffer(createElement(OnepagerDocument));
+  const filePath = join(process.cwd(), "public", "court-and-company-onepager.pdf");
+  const buffer = readFileSync(filePath);
 
-  return new NextResponse(new Uint8Array(buffer), {
+  return new NextResponse(buffer, {
     headers: {
       "Content-Type": "application/pdf",
       "Content-Disposition": 'attachment; filename="court-and-company-onepager.pdf"',
